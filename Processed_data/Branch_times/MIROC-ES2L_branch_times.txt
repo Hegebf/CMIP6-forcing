@@ -1,0 +1,19 @@
+ model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
+0 MIROC-ES2L abrupt-4xCO2 r1i1p1f2 piControl r1i1p1f2 0.0 0.0 "days since 1850-1-1" standard
+1 MIROC-ES2L ssp245 r1i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard
+2 MIROC-ES2L historical r10i1p1f2 piControl r1i1p1f2 0.0 32871.0 "days since 1850-1-1" standard
+3 MIROC-ES2L historical r1i1p1f2 piControl r1i1p1f2 0.0 0.0 "days since 1850-1-1" standard
+4 MIROC-ES2L historical r2i1p1f2 piControl r1i1p1f2 0.0 3652.0 "days since 1850-1-1" standard
+5 MIROC-ES2L historical r3i1p1f2 piControl r1i1p1f2 0.0 7305.0 "days since 1850-1-1" standard
+6 MIROC-ES2L historical r4i1p1f2 piControl r1i1p1f2 0.0 10957.0 "days since 1850-1-1" standard
+7 MIROC-ES2L historical r5i1p1f2 piControl r1i1p1f2 0.0 14610.0 "days since 1850-1-1" standard
+8 MIROC-ES2L historical r6i1p1f2 piControl r1i1p1f2 0.0 18262.0 "days since 1850-1-1" standard
+9 MIROC-ES2L historical r7i1p1f2 piControl r1i1p1f2 0.0 21914.0 "days since 1850-1-1" standard
+10 MIROC-ES2L historical r8i1p1f2 piControl r1i1p1f2 0.0 25566.0 "days since 1850-1-1" standard
+11 MIROC-ES2L historical r9i1p1f2 piControl r1i1p1f2 0.0 29219.0 "days since 1850-1-1" standard
+12 MIROC-ES2L piControl r1i1p1f2 piControl-spinup r1i1p1f2 0.0 -127835.0 "days since 2200-1-1" standard
+13 MIROC-ES2L ssp585 r1i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard
+14 MIROC-ES2L ssp370 r1i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard
+15 MIROC-ES2L ssp126 r1i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard
+16 MIROC-ES2L ssp126 r2i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard
+17 MIROC-ES2L ssp126 r3i1p1f2 historical r1i1p1f2 60265.0 60265.0 "days since 1850-1-1" standard

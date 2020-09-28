@@ -1,0 +1,7 @@
+ model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
+0 GFDL-CM4 abrupt-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 54750.0 "days since 1700-1-1" standard
+1 GFDL-CM4 ssp245 r1i1p1f1 historical r1i1p1f1 0.0 60225.0 "days since 1850-1-1" standard
+2 GFDL-CM4 historical r1i1p1f1 piControl r1i1p1f1 0.0 36500.0 "days since 0001-1-1" standard
+3 GFDL-CM4 piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 54750.0 "days since 1700-1-1" standard
+4 GFDL-CM4 piClim-control r1i1p1f1 piControl r1i1p1f1 0.0 36500.0 "days since 0001-1-1" standard
+5 GFDL-CM4 ssp585 r1i1p1f1 historical r1i1p1f1 0.0 60225.0 "days since 1850-1-1" standard
