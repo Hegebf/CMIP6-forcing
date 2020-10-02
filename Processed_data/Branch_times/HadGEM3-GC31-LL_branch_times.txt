@@ -1,0 +1,19 @@
+ model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
+0 HadGEM3-GC31-LL abrupt-4xCO2 r1i1p1f3 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01-00-00-00" standard
+1 HadGEM3-GC31-LL ssp245 r1i1p1f3 historical r1i1p1f3 59400.0 59400.0 "days since 1850-01-01-00-00-00" standard
+2 HadGEM3-GC31-LL ssp245 r2i1p1f3 historical r2i1p1f3 59400.0 59400.0 "days since 1850-01-01-00-00-00" standard
+3 HadGEM3-GC31-LL ssp245 r3i1p1f3 historical r3i1p1f3 59400.0 59400.0 "days since 1850-01-01-00-00-00" standard
+4 HadGEM3-GC31-LL ssp245 r4i1p1f3 historical r4i1p1f3 59400.0 59400.0 "days since 1850-01-01-00-00-00" standard
+5 HadGEM3-GC31-LL historical r1i1p1f3 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01-00-00-00" standard
+6 HadGEM3-GC31-LL historical r2i1p1f3 piControl r1i1p1f1 0.0 12600.0 "days since 1850-01-01-00-00-00" standard
+7 HadGEM3-GC31-LL historical r3i1p1f3 piControl r1i1p1f1 0.0 28800.0 "days since 1850-01-01-00-00-00" standard
+8 HadGEM3-GC31-LL historical r4i1p1f3 piControl r1i1p1f1 0.0 43200.0 "days since 1850-01-01-00-00-00" standard
+9 HadGEM3-GC31-LL piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 267840.0 "days since 1850-01-01-00-00-00" standard
+10 HadGEM3-GC31-LL piClim-control r1i1p1f3 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+11 HadGEM3-GC31-LL abrupt-0p5xCO2 r1i1p1f3 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+12 HadGEM3-GC31-LL piClim-4xCO2 r1i1p1f3 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+13 HadGEM3-GC31-LL ssp585 r1i1p1f3 historical r1i1p1f3 59400.0 59400.0 "days since 1850-01-01" standard
+14 HadGEM3-GC31-LL ssp585 r2i1p1f3 historical r2i1p1f3 59400.0 59400.0 "days since 1850-01-01" standard
+15 HadGEM3-GC31-LL ssp585 r3i1p1f3 historical r3i1p1f3 59400.0 59400.0 "days since 1850-01-01" standard
+16 HadGEM3-GC31-LL ssp585 r4i1p1f3 historical r4i1p1f3 59400.0 59400.0 "days since 1850-01-01" standard
+17 HadGEM3-GC31-LL ssp126 r1i1p1f3 historical r1i1p1f3 59400.0 59400.0 "days since 1850-01-01" standard

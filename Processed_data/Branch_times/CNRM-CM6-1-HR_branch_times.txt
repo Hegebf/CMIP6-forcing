@@ -1,0 +1,8 @@
+ model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
+0 CNRM-CM6-1-HR abrupt-4xCO2 r1i1p1f2 "p i C o n t r o l" r1i1p1f2 0.0 0.0 "days since 1850-01-01 00:00:00" standard
+1 CNRM-CM6-1-HR ssp245 r1i1p1f2 "h i s t o r i c a l" r1i1p1f2 60265.0 60265.0 "days since 1850-01-01 00:00:00" standard
+2 CNRM-CM6-1-HR historical r1i1p1f2 "p i C o n t r o l" r1i1p1f2 0.0 0.0 "days since 1850-01-01 00:00:00" standard
+3 CNRM-CM6-1-HR piControl r1i1p1f2 "p i C o n t r o l - s p i n u p" r1i1p1f2 0.0 91311.0 "days since 1850-01-01 00:00:00" standard
+4 CNRM-CM6-1-HR ssp585 r1i1p1f2 "h i s t o r i c a l" r1i1p1f2 60265.0 60265.0 "days since 1850-01-01 00:00:00" standard
+5 CNRM-CM6-1-HR ssp370 r1i1p1f2 "h i s t o r i c a l" r1i1p1f2 60265.0 60265.0 "days since 1850-01-01 00:00:00" standard
+6 CNRM-CM6-1-HR ssp126 r1i1p1f2 "h i s t o r i c a l" r1i1p1f2 60265.0 60265.0 "days since 1850-01-01 00:00:00" standard
