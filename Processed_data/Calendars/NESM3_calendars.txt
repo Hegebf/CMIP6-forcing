@@ -1,0 +1,8 @@
+ model exp member calendar
+0 NESM3 piControl r1i1p1f1 gregorian
+1 NESM3 abrupt-4xCO2 r1i1p1f1 standard
+2 NESM3 historical r1i1p1f1 gregorian
+3 NESM3 historical r2i1p1f1 gregorian
+4 NESM3 historical r3i1p1f1 gregorian
+5 NESM3 historical r4i1p1f1 gregorian
+6 NESM3 historical r5i1p1f1 gregorian

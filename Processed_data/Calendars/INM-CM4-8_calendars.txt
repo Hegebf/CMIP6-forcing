@@ -1,0 +1,8 @@
+ model exp member calendar
+0 INM-CM4-8 ssp585 r1i1p1f1 noleap
+1 INM-CM4-8 piControl r1i1p1f1 noleap
+2 INM-CM4-8 abrupt-4xCO2 r1i1p1f1 noleap
+3 INM-CM4-8 ssp245 r1i1p1f1 noleap
+4 INM-CM4-8 historical r1i1p1f1 noleap
+5 INM-CM4-8 ssp370 r1i1p1f1 noleap
+6 INM-CM4-8 ssp126 r1i1p1f1 noleap

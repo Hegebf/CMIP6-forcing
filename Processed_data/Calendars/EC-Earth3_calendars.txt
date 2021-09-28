@@ -1,0 +1,8 @@
+ model exp member calendar
+0 EC-Earth3 piClim-control r1i1p1f1 proleptic_gregorian
+1 EC-Earth3 piControl r1i1p1f1 proleptic_gregorian
+2 EC-Earth3 piControl r2i1p1f1 gregorian
+3 EC-Earth3 abrupt-4xCO2 r8i1p1f1 proleptic_gregorian
+4 EC-Earth3 piClim-4xCO2 r1i1p1f1 proleptic_gregorian
+5 EC-Earth3 ssp126 r1i1p1f1 proleptic_gregorian
+6 EC-Earth3 ssp126 r4i1p1f1 proleptic_gregorian

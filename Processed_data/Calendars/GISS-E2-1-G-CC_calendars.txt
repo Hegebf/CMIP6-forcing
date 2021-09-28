@@ -1,0 +1,3 @@
+ model exp member calendar
+0 GISS-E2-1-G-CC piControl r1i1p1f1 noleap
+1 GISS-E2-1-G-CC historical r1i1p1f1 noleap

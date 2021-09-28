@@ -1,0 +1,2 @@
+ model exp member calendar
+0 CESM2-WACCM-FV2 piControl r1i1p1f1 noleap

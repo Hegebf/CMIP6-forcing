@@ -1,0 +1,4 @@
+ model exp member calendar
+0 MPI-ESM-1-2-HAM piControl r1i1p1f1 proleptic_gregorian
+1 MPI-ESM-1-2-HAM historical r1i1p1f1 proleptic_gregorian
+2 MPI-ESM-1-2-HAM historical r2i1p1f1 proleptic_gregorian

@@ -1,0 +1,3 @@
+ model exp member calendar
+0 TaiESM1 piControl r1i1p1f1 noleap
+1 TaiESM1 historical r1i1p1f1 noleap

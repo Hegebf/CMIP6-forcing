@@ -1,0 +1,2 @@
+ model exp member calendar
+0 IITM-ESM piControl r1i1p1f1 julian

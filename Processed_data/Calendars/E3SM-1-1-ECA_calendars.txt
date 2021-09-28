@@ -1,0 +1,3 @@
+ model exp member calendar
+0 E3SM-1-1-ECA piControl r1i1p1f1 noleap
+1 E3SM-1-1-ECA historical r1i1p1f1 noleap

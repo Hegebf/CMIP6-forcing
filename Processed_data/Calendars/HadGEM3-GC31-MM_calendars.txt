@@ -1,0 +1,6 @@
+ model exp member calendar
+0 HadGEM3-GC31-MM abrupt-4xCO2 r1i1p1f3 360_day
+1 HadGEM3-GC31-MM historical r1i1p1f3 360_day
+2 HadGEM3-GC31-MM historical r2i1p1f3 360_day
+3 HadGEM3-GC31-MM historical r3i1p1f3 360_day
+4 HadGEM3-GC31-MM historical r4i1p1f3 360_day
