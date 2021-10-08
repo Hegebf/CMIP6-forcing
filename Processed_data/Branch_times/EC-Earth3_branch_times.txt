@@ -1,12 +1,13 @@
  model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 EC-Earth3 piClim-control r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
-1 EC-Earth3 ssp585 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
-2 EC-Earth3 piControl r1i1p1f1 piControl r1i1p1f1 149384.0 0.0 "days since 1850-01-01" standard
-3 EC-Earth3 piControl r2i1p1f1 piControl-spinup r1i1p1f1 0.0 0.0 "days since 1850-01-01" "none provided"
-4 EC-Earth3 abrupt-4xCO2 r3i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
-5 EC-Earth3 abrupt-4xCO2 r8i1p1f1 piControl r1i1p1f1 0.0 252017. "days since 1850-01-01" standard
-6 EC-Earth3 ssp245 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
-7 EC-Earth3 historical r1i1p1f1 piControl r1i1p1f1 0.0 149749.0 "days since 1850-01-01" standard
-8 EC-Earth3 piClim-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
-9 EC-Earth3 ssp370 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
-10 EC-Earth3 ssp126 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
+0 EC-Earth3 1pctCO2 r3i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+1 EC-Earth3 abrupt-4xCO2 r3i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+2 EC-Earth3 abrupt-4xCO2 r8i1p1f1 piControl r1i1p1f1 0.0 252017.0 "days since 1850-01-01" standard
+3 EC-Earth3 historical r1i1p1f1 piControl r1i1p1f1 0.0 149749.0 "days since 1850-01-01" standard
+4 EC-Earth3 piClim-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+5 EC-Earth3 piClim-control r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 1850-01-01" standard
+6 EC-Earth3 piControl r1i1p1f1 piControl r1i1p1f1 149384.0 0.0 "days since 1850-01-01" standard
+7 EC-Earth3 piControl r2i1p1f1 piControl-spinup r1i1p1f1 0.0 0.0 "days since 1850-01-01" "none provided"
+8 EC-Earth3 ssp126 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
+9 EC-Earth3 ssp245 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
+10 EC-Earth3 ssp370 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard
+11 EC-Earth3 ssp585 r1i1p1f1 historical r1i1p1f1 60265.0 60265.0 "days since 1850-01-01" standard

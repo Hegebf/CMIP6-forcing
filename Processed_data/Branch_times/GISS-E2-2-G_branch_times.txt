@@ -1,3 +1,5 @@
  model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 GISS-E2-2-G piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 0.0 "days since 1900-1-1" standard
+0 GISS-E2-2-G 1pctCO2 r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 2000-1-1" standard
 1 GISS-E2-2-G abrupt-2xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 2000-1-1" standard
+2 GISS-E2-2-G abrupt-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 0.0 "days since 2000-1-1" standard
+3 GISS-E2-2-G piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 0.0 "days since 1900-1-1" standard
