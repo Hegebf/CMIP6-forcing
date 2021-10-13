@@ -1,0 +1,17 @@
+ model exp member calendar
+0 EC-Earth3-Veg-LR ssp585 r1i1p1f1 proleptic_gregorian
+1 EC-Earth3-Veg-LR ssp585 r2i1p1f1 proleptic_gregorian
+2 EC-Earth3-Veg-LR ssp585 r3i1p1f1 proleptic_gregorian
+3 EC-Earth3-Veg-LR piControl r1i1p1f1 proleptic_gregorian
+4 EC-Earth3-Veg-LR ssp245 r1i1p1f1 proleptic_gregorian
+5 EC-Earth3-Veg-LR ssp245 r2i1p1f1 proleptic_gregorian
+6 EC-Earth3-Veg-LR ssp245 r3i1p1f1 proleptic_gregorian
+7 EC-Earth3-Veg-LR historical r1i1p1f1 proleptic_gregorian
+8 EC-Earth3-Veg-LR historical r2i1p1f1 proleptic_gregorian
+9 EC-Earth3-Veg-LR historical r3i1p1f1 proleptic_gregorian
+10 EC-Earth3-Veg-LR ssp370 r1i1p1f1 proleptic_gregorian
+11 EC-Earth3-Veg-LR ssp370 r2i1p1f1 proleptic_gregorian
+12 EC-Earth3-Veg-LR ssp370 r3i1p1f1 proleptic_gregorian
+13 EC-Earth3-Veg-LR ssp126 r1i1p1f1 proleptic_gregorian
+14 EC-Earth3-Veg-LR ssp126 r2i1p1f1 proleptic_gregorian
+15 EC-Earth3-Veg-LR ssp126 r3i1p1f1 proleptic_gregorian

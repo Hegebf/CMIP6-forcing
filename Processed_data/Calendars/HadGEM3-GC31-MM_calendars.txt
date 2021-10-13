@@ -1,6 +1,13 @@
  model exp member calendar
-0 HadGEM3-GC31-MM abrupt-4xCO2 r1i1p1f3 360_day
-1 HadGEM3-GC31-MM historical r1i1p1f3 360_day
-2 HadGEM3-GC31-MM historical r2i1p1f3 360_day
-3 HadGEM3-GC31-MM historical r3i1p1f3 360_day
-4 HadGEM3-GC31-MM historical r4i1p1f3 360_day
+0 HadGEM3-GC31-MM ssp585 r1i1p1f3 360_day
+1 HadGEM3-GC31-MM ssp585 r2i1p1f3 360_day
+2 HadGEM3-GC31-MM ssp585 r3i1p1f3 360_day
+3 HadGEM3-GC31-MM ssp585 r4i1p1f3 360_day
+4 HadGEM3-GC31-MM piControl r1i1p1f1 360_day
+5 HadGEM3-GC31-MM abrupt-4xCO2 r1i1p1f3 360_day
+6 HadGEM3-GC31-MM historical r1i1p1f3 360_day
+7 HadGEM3-GC31-MM historical r2i1p1f3 360_day
+8 HadGEM3-GC31-MM historical r3i1p1f3 360_day
+9 HadGEM3-GC31-MM historical r4i1p1f3 360_day
+10 HadGEM3-GC31-MM 1pctCO2 r1i1p1f3 360_day
+11 HadGEM3-GC31-MM ssp126 r1i1p1f3 360_day

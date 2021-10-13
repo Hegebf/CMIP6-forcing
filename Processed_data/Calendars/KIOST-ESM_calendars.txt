@@ -1,0 +1,7 @@
+ model exp member calendar
+0 KIOST-ESM ssp585 r1i1p1f1 noleap
+1 KIOST-ESM piControl r1i1p1f1 noleap
+2 KIOST-ESM abrupt-4xCO2 r1i1p1f1 noleap
+3 KIOST-ESM ssp245 r1i1p1f1 noleap
+4 KIOST-ESM historical r1i1p1f1 noleap
+5 KIOST-ESM 1pctCO2 r1i1p1f1 noleap

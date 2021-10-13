@@ -1,0 +1,12 @@
+ model exp member calendar
+0 FGOALS-f3-L ssp585 r1i1p1f1 noleap
+1 FGOALS-f3-L piControl r1i1p1f1 noleap
+2 FGOALS-f3-L abrupt-4xCO2 r1i1p1f1 noleap
+3 FGOALS-f3-L abrupt-4xCO2 r2i1p1f1 noleap
+4 FGOALS-f3-L abrupt-4xCO2 r3i1p1f1 noleap
+5 FGOALS-f3-L ssp245 r1i1p1f1 noleap
+6 FGOALS-f3-L historical r1i1p1f1 noleap
+7 FGOALS-f3-L historical r2i1p1f1 noleap
+8 FGOALS-f3-L historical r3i1p1f1 noleap
+9 FGOALS-f3-L ssp370 r1i1p1f1 noleap
+10 FGOALS-f3-L ssp126 r1i1p1f1 noleap

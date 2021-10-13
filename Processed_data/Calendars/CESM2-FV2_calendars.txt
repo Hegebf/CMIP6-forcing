@@ -1,2 +1,7 @@
  model exp member calendar
 0 CESM2-FV2 piControl r1i1p1f1 noleap
+1 CESM2-FV2 abrupt-4xCO2 r1i1p1f1 noleap
+2 CESM2-FV2 historical r1i1p1f1 noleap
+3 CESM2-FV2 historical r2i1p1f1 noleap
+4 CESM2-FV2 historical r3i1p1f1 noleap
+5 CESM2-FV2 1pctCO2 r1i1p1f1 noleap

@@ -10,9 +10,10 @@
 8 KACE-1-0-G historical r1i1p1f1 360_day
 9 KACE-1-0-G historical r2i1p1f1 360_day
 10 KACE-1-0-G historical r3i1p1f1 360_day
-11 KACE-1-0-G ssp370 r1i1p1f1 360_day
-12 KACE-1-0-G ssp370 r2i1p1f1 360_day
-13 KACE-1-0-G ssp370 r3i1p1f1 360_day
-14 KACE-1-0-G ssp126 r1i1p1f1 360_day
-15 KACE-1-0-G ssp126 r2i1p1f1 360_day
-16 KACE-1-0-G ssp126 r3i1p1f1 360_day
+11 KACE-1-0-G 1pctCO2 r1i1p1f1 360_day
+12 KACE-1-0-G ssp370 r1i1p1f1 360_day
+13 KACE-1-0-G ssp370 r2i1p1f1 360_day
+14 KACE-1-0-G ssp370 r3i1p1f1 360_day
+15 KACE-1-0-G ssp126 r1i1p1f1 360_day
+16 KACE-1-0-G ssp126 r2i1p1f1 360_day
+17 KACE-1-0-G ssp126 r3i1p1f1 360_day
