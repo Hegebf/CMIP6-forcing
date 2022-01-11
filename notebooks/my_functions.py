@@ -172,7 +172,8 @@ def load_anom(model, exp, member, length_restriction = None):
     filename = model + '_' + exp + '_' + member + '_anomalies.txt'
     file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
     data = pd.read_table(file, index_col=0, sep = ',')
-    data = data.dropna().reset_index()
+    if model != 'AWI-CM-1-1-MR':
+        data = data.dropna().reset_index()
     if length_restriction != None:
         data = data[:length_restriction]
     return data
@@ -203,8 +204,12 @@ def mean_4xCO2toarad(model, members, length_restriction = None, exp = 'abrupt-4x
     return meanN
 
 def tas_predictors(t, fixed_par, exptype = 'stepforcing', timevaryingforcing = []):
-    # input for stepforcing: years, fixed parameters (timescales for stepforcing)
     # compute components/predictors for T_n(t) = exp(-t/tau_n)*F(t) (* is a convolution)
+    # input for stepforcing: years, fixed parameters (timescales for stepforcing)
+    # stepforcing_ computes response to unit forcing,
+    # to be multiplied by the actual forcing afterwards
+    
+    # timevaryingforcing: need a forcing time series input
     if exptype == 'stepforcing':
         timescales = fixed_par; dim = len(timescales)
         predictors = np.zeros((len(t),dim))
@@ -577,9 +582,18 @@ def plot_components(t, Tn, timescales):
     ax.set_xlim(min(t),max(t))
     ax.tick_params(axis='both',labelsize=22)
     ax.legend(loc=2, prop={'size': 18});
+
+def expfit_detrend(x):
+    dim = 3
+    taulist = f.random_tau(dim)
+    tas_pred = f.tas_predictors(t = np.arange(0,150), fixed_par = taulist);
+    a_n, rnorm1 = optimize.nnls(tas_pred, np.abs(x))
+    Ti = np.array([tas_pred[:,i]*a_n[i] for i in range(0,dim)]) # compute components
+    Tsum = tas_pred@a_n # sum of all components
+    return (np.abs(x) - Tsum)*np.sign(x[-1])
     
 
-def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, sspexp = '', model = ''):
+def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, titlestr = ''):
     fig, ax = plt.subplots(nrows=1,ncols=2,figsize = [16,5])
     for axis in ax:
         axis.set_xlabel('t (years)',fontsize = 18)
@@ -591,18 +605,18 @@ def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, sspexp = '', model = 
     ax[0,].plot(t,Fiarray[:,0],linewidth=2,color = "black",label = "Old forcing")
     ax[0,].plot(t,Fiarray[:,np.shape(Fiarray)[1]-1],linewidth=1,color = "blue",label = "New forcing")
     ax[0,].set_ylabel('F(t) [$W/m^2$]',fontsize = 18)
-    if sspexp == '':
-        ax[0,].set_title('Effective radiative forcing',fontsize = 18)
-        ax[1,].set_title('Temperature',fontsize = 18)
-    else:
-        ax[0,].set_title('Historical and ' + sspexp + ' effective forcing',fontsize = 18)
-        ax[1,].set_title('Historical and ' + sspexp + ' temperature',fontsize = 18)
-    ax[1,].plot(t,Tcoupled,linewidth=3,color = "black",label = model + " modelled response")
+    ax[0,].set_title(titlestr + ' ERF',fontsize = 18)
+    ax[1,].set_title(titlestr + ' Temp.',fontsize = 18)
+    ax[1,].plot(t,Tcoupled,linewidth=3,color = "black",label = "coupled model response")
     ax[1,].plot(t,Tiarray[:,0],'--',linewidth=2,color = "black",label = "Linear response to old forcing")
     ax[1,].plot(t,Tiarray[:,-1],'--',linewidth=2,color = "blue",label = "Linear response to new forcing")
     ax[1,].set_ylabel('T(t) [°C]',fontsize = 18)
-    
-    
+    #print(np.size(Tcoupled))
+    #Tstd = np.std(f.expfit_detrend(Tcoupled.values))
+    #inds = np.argwhere(np.abs(Tcoupled.values-Tiarray[:,-1])/Tstd>2)#[:,-1]
+    #print(len(inds))
+    #if len(inds)>0:
+    #    ax[1,].axvline(x=t[inds[0]])
     ax[0,].text(0,1.03,'a)',transform=ax[0,].transAxes, fontsize=20)
     ax[1,].text(0,1.03,'b)',transform=ax[1,].transAxes, fontsize=20)
     #plt.close()
