@@ -161,6 +161,8 @@ def find_members(model, exp, datatype = 'anomalies'):
         directory = '../Processed_data/Global_annual_anomalies/'
     elif datatype == 'means':
         directory = '../Processed_data/Global_annual_means/'
+    elif datatype == 'forcing':
+        directory = '../Estimates/Transient_forcing_estimates/'
     modelexpdirectory = os.path.join(directory, model, exp)
     filenames = [f.name for f in os.scandir(modelexpdirectory) if f.name !='.ipynb_checkpoints']
 
@@ -622,7 +624,11 @@ def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, titlestr = ''):
     #plt.close()
     return fig
     
-
+def etminan_co2forcing(C, C0 = 284.3169998547858, N_bar = 273.021049007482):
+    a1 = -2.4*10**(-7)
+    b1 = 7.2*10**(-4)
+    c1 = -2.1*10**(-4)
+    return (a1*(C-C0)**2 + b1*np.abs(C-C0) + c1*N_bar + 5.36)*np.log(C/C0)
 
 
 
