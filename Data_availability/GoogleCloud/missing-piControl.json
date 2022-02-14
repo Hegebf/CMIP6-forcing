@@ -1,0 +1,25 @@
+{
+  "CMCC-ESM2": [
+    "r1i1p1f1"
+  ],
+  "EC-Earth3-CC": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-2-H": [
+    "r1i1p1f1"
+  ],
+  "ICON-ESM-LR": [
+    "r1i1p1f1"
+  ],
+  "IPSL-CM5A2-INCA": [
+    "r1i1p1f1"
+  ],
+  "MIROC-ES2H": [
+    "r1i1p1f2",
+    "r1i1p2f2",
+    "r1i1p3f2"
+  ],
+  "NorESM2-LM": [
+    "r1i1p1f1"
+  ]
+}

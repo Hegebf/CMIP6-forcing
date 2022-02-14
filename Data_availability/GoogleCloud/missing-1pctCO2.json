@@ -1,0 +1,23 @@
+{
+  "CAS-ESM2-0": [
+    "r1i1p1f1"
+  ],
+  "EC-Earth3": [
+    "r3i1p1f1"
+  ],
+  "EC-Earth3-CC": [
+    "r1i1p1f1"
+  ],
+  "EC-Earth3-Veg": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-2-H": [
+    "r1i1p1f1"
+  ],
+  "ICON-ESM-LR": [
+    "r1i1p1f1"
+  ],
+  "IPSL-CM5A2-INCA": [
+    "r1i1p1f1"
+  ]
+}

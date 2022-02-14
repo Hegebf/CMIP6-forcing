@@ -1,0 +1,40 @@
+{
+  "CNRM-CM6-1": [
+    "r1i1p1f2"
+  ],
+  "CanESM5": [
+    "r1i1p2f1",
+    "r2i1p2f1",
+    "r3i1p2f1"
+  ],
+  "GFDL-CM4": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p1f1",
+    "r1i1p1f2",
+    "r1i1p3f2"
+  ],
+  "HadGEM3-GC31-LL": [
+    "r1i1p1f3",
+    "r2i1p1f3",
+    "r3i1p1f3"
+  ],
+  "IPSL-CM6A-LR": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "MIROC6": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "NorESM2-LM": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ]
+}

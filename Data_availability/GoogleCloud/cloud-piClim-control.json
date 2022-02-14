@@ -1,0 +1,69 @@
+{
+  "ACCESS-CM2": [
+    "r1i1p1f1"
+  ],
+  "ACCESS-ESM1-5": [
+    "r1i1p1f1"
+  ],
+  "CESM2": [
+    "r1i1p1f1"
+  ],
+  "CESM2-WACCM": [
+    "r1i2p1f1"
+  ],
+  "CNRM-CM6-1": [
+    "r1i1p1f2"
+  ],
+  "CNRM-ESM2-1": [
+    "r1i1p1f2"
+  ],
+  "CanESM5": [
+    "r1i1p2f1"
+  ],
+  "EC-Earth3": [
+    "r1i1p1f1"
+  ],
+  "GFDL-CM4": [
+    "r1i1p1f1"
+  ],
+  "GFDL-ESM4": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p1f1",
+    "r1i1p1f2",
+    "r1i1p3f1"
+  ],
+  "HadGEM3-GC31-LL": [
+    "r1i1p1f3"
+  ],
+  "IPSL-CM6A-LR": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1"
+  ],
+  "MIROC6": [
+    "r11i1p1f1",
+    "r1i1p1f1"
+  ],
+  "MPI-ESM1-2-LR": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "MRI-ESM2-0": [
+    "r1i1p1f1"
+  ],
+  "NorESM2-LM": [
+    "r1i1p1f1",
+    "r1i1p2f1"
+  ],
+  "NorESM2-MM": [
+    "r1i1p1f1"
+  ],
+  "UKESM1-0-LL": [
+    "r1i1p1f4"
+  ]
+}

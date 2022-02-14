@@ -1,0 +1,23 @@
+{
+  "CESM2": [
+    "r1i1p1f1"
+  ],
+  "CNRM-CM6-1": [
+    "r1i1p1f2"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p1f1"
+  ],
+  "HadGEM3-GC31-LL": [
+    "r1i1p1f3"
+  ],
+  "IPSL-CM6A-LR": [
+    "r1i1p1f1"
+  ],
+  "MIROC6": [
+    "r1i1p1f1"
+  ],
+  "MRI-ESM2-0": [
+    "r1i1p1f1"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "ACCESS-CM2": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "ACCESS-ESM1-5": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "CESM2": [
+    "r3i1p1f1"
+  ],
+  "FGOALS-g3": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p1f2",
+    "r1i1p3f1",
+    "r2i1p1f2",
+    "r2i1p3f1",
+    "r3i1p1f2",
+    "r3i1p3f1",
+    "r4i1p1f2",
+    "r4i1p3f1",
+    "r5i1p1f2",
+    "r5i1p3f1"
+  ],
+  "HadGEM3-GC31-LL": [
+    "r5i1p1f3"
+  ],
+  "MIROC6": [
+    "r10i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1",
+    "r6i1p1f1",
+    "r7i1p1f1",
+    "r8i1p1f1",
+    "r9i1p1f1"
+  ],
+  "MRI-ESM2-0": [
+    "r2i1p1f1",
+    "r4i1p1f1"
+  ],
+  "NorESM2-LM": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "BCC-ESM1": [
+    "r1i1p1f1"
+  ],
+  "EC-Earth3": [
+    "r2i1p1f1"
+  ],
+  "EC-Earth3-AerChem": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p3f2"
+  ],
+  "MPI-ESM-1-2-HAM": [
+    "r1i1p1f1"
+  ],
+  "TaiESM1": [
+    "r1i1p1f1"
+  ]
+}

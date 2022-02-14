@@ -1,0 +1,153 @@
+{
+  "CAMS-CSM1-0": [
+    "r1i1p1f1",
+    "r2i1p1f1"
+  ],
+  "CNRM-ESM2-1": [
+    "r1i1p1f2",
+    "r2i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r5i1p1f2"
+  ],
+  "CanESM5": [
+    "r10i1p1f1",
+    "r10i1p2f1",
+    "r11i1p1f1",
+    "r11i1p2f1",
+    "r12i1p1f1",
+    "r12i1p2f1",
+    "r13i1p1f1",
+    "r13i1p2f1",
+    "r14i1p1f1",
+    "r14i1p2f1",
+    "r15i1p1f1",
+    "r15i1p2f1",
+    "r16i1p1f1",
+    "r16i1p2f1",
+    "r17i1p1f1",
+    "r17i1p2f1",
+    "r18i1p1f1",
+    "r18i1p2f1",
+    "r19i1p1f1",
+    "r19i1p2f1",
+    "r1i1p1f1",
+    "r1i1p2f1",
+    "r20i1p1f1",
+    "r20i1p2f1",
+    "r21i1p1f1",
+    "r21i1p2f1",
+    "r22i1p1f1",
+    "r22i1p2f1",
+    "r23i1p1f1",
+    "r23i1p2f1",
+    "r24i1p1f1",
+    "r24i1p2f1",
+    "r25i1p1f1",
+    "r25i1p2f1",
+    "r2i1p1f1",
+    "r2i1p2f1",
+    "r3i1p1f1",
+    "r3i1p2f1",
+    "r4i1p1f1",
+    "r4i1p2f1",
+    "r5i1p1f1",
+    "r5i1p2f1",
+    "r6i1p1f1",
+    "r6i1p2f1",
+    "r7i1p1f1",
+    "r7i1p2f1",
+    "r8i1p1f1",
+    "r8i1p2f1",
+    "r9i1p1f1",
+    "r9i1p2f1"
+  ],
+  "EC-Earth3": [
+    "r101i1p1f1",
+    "r102i1p1f1",
+    "r103i1p1f1",
+    "r104i1p1f1",
+    "r105i1p1f1",
+    "r106i1p1f1",
+    "r107i1p1f1",
+    "r108i1p1f1",
+    "r109i1p1f1",
+    "r110i1p1f1",
+    "r111i1p1f1",
+    "r112i1p1f1",
+    "r113i1p1f1",
+    "r114i1p1f1",
+    "r119i1p1f1",
+    "r120i1p1f1",
+    "r121i1p1f1",
+    "r122i1p1f1",
+    "r123i1p1f1",
+    "r124i1p1f1",
+    "r125i1p1f1",
+    "r126i1p1f1",
+    "r127i1p1f1",
+    "r128i1p1f1",
+    "r129i1p1f1",
+    "r130i1p1f1",
+    "r131i1p1f1",
+    "r132i1p1f1",
+    "r133i1p1f1",
+    "r134i1p1f1",
+    "r135i1p1f1",
+    "r136i1p1f1",
+    "r137i1p1f1",
+    "r138i1p1f1",
+    "r139i1p1f1",
+    "r140i1p1f1",
+    "r141i1p1f1",
+    "r142i1p1f1",
+    "r143i1p1f1",
+    "r144i1p1f1",
+    "r145i1p1f1",
+    "r146i1p1f1",
+    "r147i1p1f1",
+    "r148i1p1f1",
+    "r149i1p1f1",
+    "r150i1p1f1",
+    "r4i1p1f1"
+  ],
+  "EC-Earth3-Veg": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "FGOALS-g3": [
+    "r1i1p1f1"
+  ],
+  "GFDL-ESM4": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r1i1p1f2",
+    "r1i1p3f1"
+  ],
+  "IPSL-CM6A-LR": [
+    "r14i1p1f1",
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r6i1p1f1"
+  ],
+  "MIROC-ES2L": [
+    "r1i1p1f2",
+    "r8i1p1f2"
+  ],
+  "MIROC6": [
+    "r1i1p1f1"
+  ],
+  "MRI-ESM2-0": [
+    "r1i1p1f1"
+  ],
+  "UKESM1-0-LL": [
+    "r1i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r8i1p1f2"
+  ]
+}

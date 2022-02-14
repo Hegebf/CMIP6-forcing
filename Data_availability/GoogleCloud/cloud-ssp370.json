@@ -1,0 +1,272 @@
+{
+  "ACCESS-CM2": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "AWI-CM-1-1-MR": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1"
+  ],
+  "BCC-CSM2-MR": [
+    "r1i1p1f1"
+  ],
+  "BCC-ESM1": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "CAMS-CSM1-0": [
+    "r1i1p1f1",
+    "r2i1p1f1"
+  ],
+  "CESM2": [
+    "r10i1p1f1",
+    "r11i1p1f1",
+    "r4i1p1f1"
+  ],
+  "CESM2-WACCM": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "CMCC-CM2-SR5": [
+    "r1i1p1f1"
+  ],
+  "CNRM-CM6-1": [
+    "r1i1p1f2",
+    "r2i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r5i1p1f2",
+    "r6i1p1f2"
+  ],
+  "CNRM-CM6-1-HR": [
+    "r1i1p1f2"
+  ],
+  "CNRM-ESM2-1": [
+    "r1i1p1f2",
+    "r2i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r5i1p1f2"
+  ],
+  "CanESM5": [
+    "r10i1p1f1",
+    "r10i1p2f1",
+    "r11i1p1f1",
+    "r11i1p2f1",
+    "r12i1p1f1",
+    "r12i1p2f1",
+    "r13i1p1f1",
+    "r13i1p2f1",
+    "r14i1p1f1",
+    "r14i1p2f1",
+    "r15i1p1f1",
+    "r15i1p2f1",
+    "r16i1p1f1",
+    "r16i1p2f1",
+    "r17i1p1f1",
+    "r17i1p2f1",
+    "r18i1p1f1",
+    "r18i1p2f1",
+    "r19i1p1f1",
+    "r19i1p2f1",
+    "r1i1p1f1",
+    "r1i1p2f1",
+    "r20i1p1f1",
+    "r20i1p2f1",
+    "r21i1p1f1",
+    "r21i1p2f1",
+    "r22i1p1f1",
+    "r22i1p2f1",
+    "r23i1p1f1",
+    "r23i1p2f1",
+    "r24i1p1f1",
+    "r24i1p2f1",
+    "r25i1p1f1",
+    "r25i1p2f1",
+    "r2i1p1f1",
+    "r2i1p2f1",
+    "r3i1p1f1",
+    "r3i1p2f1",
+    "r4i1p1f1",
+    "r4i1p2f1",
+    "r5i1p1f1",
+    "r5i1p2f1",
+    "r6i1p1f1",
+    "r6i1p2f1",
+    "r7i1p1f1",
+    "r7i1p2f1",
+    "r8i1p1f1",
+    "r8i1p2f1",
+    "r9i1p1f1",
+    "r9i1p2f1"
+  ],
+  "EC-Earth3": [
+    "r11i1p1f1",
+    "r13i1p1f1",
+    "r15i1p1f1",
+    "r1i1p1f1",
+    "r4i1p1f1",
+    "r6i1p1f1",
+    "r9i1p1f1"
+  ],
+  "EC-Earth3-AerChem": [
+    "r1i1p1f1"
+  ],
+  "EC-Earth3-Veg": [
+    "r12i1p1f1",
+    "r14i1p1f1",
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1"
+  ],
+  "FGOALS-f3-L": [
+    "r1i1p1f1"
+  ],
+  "FGOALS-g3": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r5i1p1f1"
+  ],
+  "GFDL-ESM4": [
+    "r1i1p1f1"
+  ],
+  "GISS-E2-1-G": [
+    "r10i1p1f2",
+    "r1i1p3f1",
+    "r1i1p3f2",
+    "r1i1p5f1",
+    "r2i1p1f2",
+    "r2i1p3f1",
+    "r2i1p3f2",
+    "r3i1p1f2",
+    "r3i1p3f1",
+    "r3i1p3f2",
+    "r4i1p1f2",
+    "r4i1p3f1",
+    "r5i1p1f2",
+    "r6i1p1f2",
+    "r7i1p1f2",
+    "r8i1p1f2",
+    "r9i1p1f2"
+  ],
+  "GISS-E2-1-H": [
+    "r1i1p1f2",
+    "r2i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r5i1p1f2"
+  ],
+  "IITM-ESM": [
+    "r1i1p1f1"
+  ],
+  "INM-CM4-8": [
+    "r1i1p1f1"
+  ],
+  "INM-CM5-0": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1"
+  ],
+  "IPSL-CM6A-LR": [
+    "r10i1p1f1",
+    "r14i1p1f1",
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1",
+    "r6i1p1f1",
+    "r7i1p1f1",
+    "r8i1p1f1",
+    "r9i1p1f1"
+  ],
+  "KACE-1-0-G": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "MIROC-ES2L": [
+    "r1i1p1f2",
+    "r2i1p1f2"
+  ],
+  "MIROC6": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "MPI-ESM-1-2-HAM": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "MPI-ESM1-2-HR": [
+    "r10i1p1f1",
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1",
+    "r6i1p1f1",
+    "r7i1p1f1",
+    "r8i1p1f1",
+    "r9i1p1f1"
+  ],
+  "MPI-ESM1-2-LR": [
+    "r10i1p1f1",
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1",
+    "r6i1p1f1",
+    "r7i1p1f1",
+    "r8i1p1f1",
+    "r9i1p1f1"
+  ],
+  "MRI-ESM2-0": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1",
+    "r4i1p1f1",
+    "r5i1p1f1"
+  ],
+  "NorESM2-LM": [
+    "r1i1p1f1",
+    "r2i1p1f1",
+    "r3i1p1f1"
+  ],
+  "NorESM2-MM": [
+    "r1i1p1f1"
+  ],
+  "TaiESM1": [
+    "r1i1p1f1"
+  ],
+  "UKESM1-0-LL": [
+    "r10i1p1f2",
+    "r11i1p1f2",
+    "r12i1p1f2",
+    "r16i1p1f2",
+    "r17i1p1f2",
+    "r18i1p1f2",
+    "r19i1p1f2",
+    "r1i1p1f2",
+    "r2i1p1f2",
+    "r3i1p1f2",
+    "r4i1p1f2",
+    "r5i1p1f2",
+    "r6i1p1f2",
+    "r7i1p1f2",
+    "r8i1p1f2",
+    "r9i1p1f2"
+  ]
+}
