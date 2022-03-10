@@ -1,0 +1,21 @@
+{"historical":
+    {
+        "CNRM-CM6-1": {
+            "r23i1p1f2": "rsdt missing"
+        },
+        "GFDL-ESM4": {
+            "r2i1p1f1": "only tas exist",
+            "r3i1p1f1": "only tas exist"
+        },
+        "EC-Earth3-AerChem": {
+            "r4i1p1f1": "missing many years of data"
+        }
+    },
+"ssp245":
+    {
+        "GFDL-ESM4": {
+            "r2i1p1f1": "only tas exist",
+            "r3i1p1f1": "only tas exist"
+        }
+    }
+}
