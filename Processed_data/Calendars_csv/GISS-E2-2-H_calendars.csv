@@ -1,0 +1,10 @@
+,model,exp,member,calendar
+0,GISS-E2-2-H,1pctCO2,r1i1p1f1,365_day
+1,GISS-E2-2-H,abrupt-2xCO2,r1i1p1f1,365_day
+2,GISS-E2-2-H,abrupt-4xCO2,r1i1p1f1,365_day
+3,GISS-E2-2-H,historical,r1i1p1f1,365_day
+4,GISS-E2-2-H,historical,r2i1p1f1,365_day
+5,GISS-E2-2-H,historical,r3i1p1f1,365_day
+6,GISS-E2-2-H,historical,r4i1p1f1,365_day
+7,GISS-E2-2-H,historical,r5i1p1f1,365_day
+8,GISS-E2-2-H,piControl,r1i1p1f1,365_day

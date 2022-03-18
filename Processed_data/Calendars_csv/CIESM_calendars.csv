@@ -1,0 +1,10 @@
+,model,exp,member,calendar
+0,CIESM,1pctCO2,r1i1p1f1,noleap
+1,CIESM,abrupt-4xCO2,r1i1p1f1,noleap
+2,CIESM,historical,r1i1p1f1,noleap
+3,CIESM,historical,r2i1p1f1,noleap
+4,CIESM,historical,r3i1p1f1,noleap
+5,CIESM,piControl,r1i1p1f1,noleap
+6,CIESM,ssp126,r1i1p1f1,noleap
+7,CIESM,ssp245,r1i1p1f1,noleap
+8,CIESM,ssp585,r1i1p1f1,noleap

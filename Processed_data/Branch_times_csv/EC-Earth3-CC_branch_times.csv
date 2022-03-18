@@ -1,0 +1,7 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,EC-Earth3-CC,1pctCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+1,EC-Earth3-CC,abrupt-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+2,EC-Earth3-CC,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+3,EC-Earth3-CC,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+4,EC-Earth3-CC,ssp245,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+5,EC-Earth3-CC,ssp585,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard

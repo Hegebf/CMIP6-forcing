@@ -1,0 +1,10 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,CIESM,1pctCO2,r1i1p1f1,piControl,r2i1p1f1,0.0,219000.0,days since 0001-01-01,standard
+1,CIESM,abrupt-4xCO2,r1i1p1f1,piControl,r2i1p1f1,0.0,219000.0,days since 0001-01-01,standard
+2,CIESM,historical,r1i1p1f1,piControl,r2i1p1f1,674885.0,182500.0,days since 0001-01-01,standard
+3,CIESM,historical,r2i1p1f1,piControl,r3i1p1f1,674885.0,219000.0,days since 0001-01-01,standard
+4,CIESM,historical,r3i1p1f1,piControl,r3i1p1f1,674885.0,255500.0,days since 0001-01-01,standard
+5,CIESM,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,109500.0,days since 0001-01-01,standard
+6,CIESM,ssp126,r1i1p1f1,historical,r1i1p1f1,735110.0,735110.0,days since 0001-01-01,standard
+7,CIESM,ssp245,r1i1p1f1,historical,r1i1p1f1,735110.0,735110.0,days since 0001-01-01,standard
+8,CIESM,ssp585,r1i1p1f1,historical,r1i1p1f1,735110.0,735110.0,days since 0001-01-01,standard

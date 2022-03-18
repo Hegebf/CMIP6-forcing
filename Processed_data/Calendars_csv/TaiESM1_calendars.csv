@@ -1,0 +1,13 @@
+,model,exp,member,calendar
+0,TaiESM1,1pctCO2,r1i1p1f1,noleap
+1,TaiESM1,abrupt-0p5xCO2,r1i1p1f1,noleap
+2,TaiESM1,abrupt-2xCO2,r1i1p1f1,noleap
+3,TaiESM1,abrupt-4xCO2,r1i1p1f1,noleap
+4,TaiESM1,historical,r1i1p1f1,noleap
+5,TaiESM1,historical,r2i1p1f1,noleap
+6,TaiESM1,piClim-control,r1i1p1f1,noleap
+7,TaiESM1,piControl,r1i1p1f1,noleap
+8,TaiESM1,ssp126,r1i1p1f1,noleap
+9,TaiESM1,ssp245,r1i1p1f1,noleap
+10,TaiESM1,ssp370,r1i1p1f1,noleap
+11,TaiESM1,ssp585,r1i1p1f1,noleap

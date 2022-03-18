@@ -1,0 +1,9 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,INM-CM4-8,1pctCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,35405.0,days since 1850-01-01,standard
+1,INM-CM4-8,abrupt-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,35405.0,days since 1850-01-01,standard
+2,INM-CM4-8,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,35405.0,days since 1850-01-01,standard
+3,INM-CM4-8,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+4,INM-CM4-8,ssp126,r1i1p1f1,historical,r1i1p1f1,60225.0,60225.0,days since 1850-01-01,standard
+5,INM-CM4-8,ssp245,r1i1p1f1,historical,r1i1p1f1,60225.0,60225.0,days since 1850-01-01,standard
+6,INM-CM4-8,ssp370,r1i1p1f1,historical,r1i1p1f1,60225.0,60225.0,days since 1850-01-01,standard
+7,INM-CM4-8,ssp585,r1i1p1f1,historical,r1i1p1f1,60225.0,60225.0,days since 1850-01-01,standard

@@ -1,0 +1,9 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,IITM-ESM,1pctCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+1,IITM-ESM,abrupt-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+2,IITM-ESM,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+3,IITM-ESM,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+4,IITM-ESM,ssp126,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+5,IITM-ESM,ssp245,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+6,IITM-ESM,ssp370,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation
+7,IITM-ESM,ssp585,r1i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,Spin-up documentation

@@ -1,0 +1,19 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,CAMS-CSM1-0,1pctCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,3030.0,days since 3030-01-01,Standard
+1,CAMS-CSM1-0,1pctCO2,r2i1p1f1,piControl,r1i1p1f1,0.0,3035.0,days since 3035-01-01,Standard
+2,CAMS-CSM1-0,abrupt-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,3030.0,days since 3030-01-01,Standard
+3,CAMS-CSM1-0,abrupt-4xCO2,r2i1p1f1,piControl,r1i1p1f1,0.0,3035.0,days since 3035-01-01,Standard
+4,CAMS-CSM1-0,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,3025.0,days since 1850-01-01,Standard
+5,CAMS-CSM1-0,historical,r1i1p1f2,piControl,r1i1p1f1,0.0,3025.0,days since 1850-01-01,Standard
+6,CAMS-CSM1-0,historical,r2i1p1f1,piControl,r1i1p1f1,0.0,3030.0,days since 1850-01-01,Standard
+7,CAMS-CSM1-0,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 2900-01-01,Standard
+8,CAMS-CSM1-0,ssp119,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+9,CAMS-CSM1-0,ssp119,r2i1p1f1,historical,r2i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+10,CAMS-CSM1-0,ssp126,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+11,CAMS-CSM1-0,ssp126,r2i1p1f1,historical,r2i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+12,CAMS-CSM1-0,ssp245,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+13,CAMS-CSM1-0,ssp245,r2i1p1f1,historical,r2i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+14,CAMS-CSM1-0,ssp370,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+15,CAMS-CSM1-0,ssp370,r2i1p1f1,historical,r2i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+16,CAMS-CSM1-0,ssp585,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+17,CAMS-CSM1-0,ssp585,r2i1p1f1,historical,r2i1p1f1,0.0,2015.0,days since 2015-01-01,Standard

@@ -1,0 +1,16 @@
+,model,exp,member,calendar
+0,CAS-ESM2-0,1pctCO2,r1i1p1f1,365_day
+1,CAS-ESM2-0,abrupt-4xCO2,r1i1p1f1,noleap
+2,CAS-ESM2-0,historical,r1i1p1f1,noleap
+3,CAS-ESM2-0,historical,r2i1p1f1,noleap
+4,CAS-ESM2-0,historical,r3i1p1f1,noleap
+5,CAS-ESM2-0,historical,r4i1p1f1,noleap
+6,CAS-ESM2-0,piControl,r1i1p1f1,noleap
+7,CAS-ESM2-0,ssp126,r1i1p1f1,365_day
+8,CAS-ESM2-0,ssp126,r3i1p1f1,365_day
+9,CAS-ESM2-0,ssp245,r1i1p1f1,365_day
+10,CAS-ESM2-0,ssp245,r3i1p1f1,365_day
+11,CAS-ESM2-0,ssp370,r1i1p1f1,365_day
+12,CAS-ESM2-0,ssp370,r3i1p1f1,365_day
+13,CAS-ESM2-0,ssp585,r1i1p1f1,365_day
+14,CAS-ESM2-0,ssp585,r3i1p1f1,365_day

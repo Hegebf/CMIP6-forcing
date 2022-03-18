@@ -1,0 +1,7 @@
+,model,exp,member,calendar
+0,IPSL-CM5A2-INCA,1pctCO2,r1i1p1f1,noleap
+1,IPSL-CM5A2-INCA,abrupt-4xCO2,r1i1p1f1,gregorian
+2,IPSL-CM5A2-INCA,historical,r1i1p1f1,gregorian
+3,IPSL-CM5A2-INCA,piControl,r1i1p1f1,noleap
+4,IPSL-CM5A2-INCA,ssp126,r1i1p1f1,noleap
+5,IPSL-CM5A2-INCA,ssp370,r1i1p1f1,noleap

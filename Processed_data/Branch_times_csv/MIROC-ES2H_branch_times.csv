@@ -1,0 +1,10 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,MIROC-ES2H,abrupt-4xCO2,r1i1p1f2,piControl,r1i1p1f2,0.0,0.0,days since 1850-1-1,standard
+1,MIROC-ES2H,abrupt-4xCO2,r1i1p2f2,piControl,r1i1p2f2,0.0,0.0,days since 1850-1-1,standard
+2,MIROC-ES2H,abrupt-4xCO2,r1i1p3f2,piControl,r1i1p3f2,0.0,0.0,days since 1850-1-1,standard
+3,MIROC-ES2H,historical,r1i1p1f2,piControl,r1i1p1f2,0.0,0.0,days since 1850-1-1,standard
+4,MIROC-ES2H,historical,r1i1p2f2,piControl,r1i1p2f2,0.0,0.0,days since 1850-1-1,standard
+5,MIROC-ES2H,historical,r1i1p3f2,piControl,r1i1p3f2,0.0,0.0,days since 1850-1-1,standard
+6,MIROC-ES2H,piControl,r1i1p1f2,piControl-spinup,r1i1p1f2,0.0,-127835.0,days since 2200-1-1,standard
+7,MIROC-ES2H,piControl,r1i1p2f2,piControl-spinup,r1i1p2f2,0.0,-127835.0,days since 2200-1-1,standard
+8,MIROC-ES2H,piControl,r1i1p3f2,piControl-spinup,r1i1p3f2,0.0,-127835.0,days since 2200-1-1,standard

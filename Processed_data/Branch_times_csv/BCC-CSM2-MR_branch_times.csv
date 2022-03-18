@@ -1,0 +1,20 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,BCC-CSM2-MR,1pctCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,branch
+1,BCC-CSM2-MR,abrupt-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,branch
+2,BCC-CSM2-MR,hist-GHG,r1i1p1f1,piControl,r1i1p1f1,0.0,2289.0,days since 1850-01-01,Standard
+3,BCC-CSM2-MR,hist-GHG,r2i1p1f1,piControl,r1i1p1f1,0.0,2429.0,days since 1850-01-01,Standard
+4,BCC-CSM2-MR,hist-GHG,r3i1p1f1,piControl,r1i1p1f1,0.0,2439.0,days since 1850-01-01,Standard
+5,BCC-CSM2-MR,hist-aer,r1i1p1f1,piControl,r1i1p1f1,0.0,2289.0,days since 1850-01-01,Standard
+6,BCC-CSM2-MR,hist-aer,r2i1p1f1,piControl,r1i1p1f1,0.0,2429.0,days since 1850-01-01,Standard
+7,BCC-CSM2-MR,hist-aer,r3i1p1f1,piControl,r1i1p1f1,0.0,2439.0,days since 1850-01-01,Standard
+8,BCC-CSM2-MR,hist-nat,r1i1p1f1,piControl,r1i1p1f1,0.0,2289.0,days since 1850-01-01,Standard
+9,BCC-CSM2-MR,hist-nat,r2i1p1f1,piControl,r1i1p1f1,0.0,2429.0,days since 1850-01-01,Standard
+10,BCC-CSM2-MR,hist-nat,r3i1p1f1,piControl,r1i1p1f1,0.0,2439.0,days since 1850-01-01,Standard
+11,BCC-CSM2-MR,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,2289.0,days since 1850-01-01,Standard
+12,BCC-CSM2-MR,historical,r2i1p1f1,piControl,r2i1p1f1,0.0,1853.0,days since 1850-01-01,Standard
+13,BCC-CSM2-MR,historical,r3i1p1f1,piControl,r3i1p1f1,0.0,2439.0,days since 1850-01-01,Standard
+14,BCC-CSM2-MR,piControl,r1i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+15,BCC-CSM2-MR,ssp126,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+16,BCC-CSM2-MR,ssp245,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+17,BCC-CSM2-MR,ssp370,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard
+18,BCC-CSM2-MR,ssp585,r1i1p1f1,historical,r1i1p1f1,0.0,2015.0,days since 2015-01-01,Standard

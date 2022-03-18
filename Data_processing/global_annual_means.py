@@ -214,6 +214,8 @@ dpm = {'noleap': [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
        '360_day': [0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
       }
 
+
+
 def compute_day_weights(ds, calendar = 'noleap', first_month = 1): # new function
     month_length = xr.DataArray(get_dpm((ds.time.to_index()), calendar=calendar), coords=[ds.time], name='month_length')
     if first_month == 1:

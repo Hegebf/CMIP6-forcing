@@ -1,0 +1,7 @@
+,model,exp,member,calendar
+0,EC-Earth3-CC,1pctCO2,r1i1p1f1,proleptic_gregorian
+1,EC-Earth3-CC,abrupt-4xCO2,r1i1p1f1,proleptic_gregorian
+2,EC-Earth3-CC,historical,r1i1p1f1,proleptic_gregorian
+3,EC-Earth3-CC,piControl,r1i1p1f1,proleptic_gregorian
+4,EC-Earth3-CC,ssp245,r1i1p1f1,proleptic_gregorian
+5,EC-Earth3-CC,ssp585,r1i1p1f1,proleptic_gregorian

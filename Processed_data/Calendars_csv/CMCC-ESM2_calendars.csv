@@ -1,0 +1,9 @@
+,model,exp,member,calendar
+0,CMCC-ESM2,1pctCO2,r1i1p1f1,noleap
+1,CMCC-ESM2,abrupt-4xCO2,r1i1p1f1,noleap
+2,CMCC-ESM2,historical,r1i1p1f1,noleap
+3,CMCC-ESM2,piControl,r1i1p1f1,365_day
+4,CMCC-ESM2,ssp126,r1i1p1f1,365_day
+5,CMCC-ESM2,ssp245,r1i1p1f1,365_day
+6,CMCC-ESM2,ssp370,r1i1p1f1,365_day
+7,CMCC-ESM2,ssp585,r1i1p1f1,365_day

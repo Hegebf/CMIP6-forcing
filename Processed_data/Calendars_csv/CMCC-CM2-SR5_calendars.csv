@@ -1,0 +1,15 @@
+,model,exp,member,calendar
+0,CMCC-CM2-SR5,1pctCO2,r1i1p1f1,noleap
+1,CMCC-CM2-SR5,abrupt-4xCO2,r1i1p1f1,noleap
+2,CMCC-CM2-SR5,historical,r1i1p1f1,noleap
+3,CMCC-CM2-SR5,historical,r2i1p2f1,365_day
+4,CMCC-CM2-SR5,historical,r3i1p2f1,365_day
+5,CMCC-CM2-SR5,historical,r4i1p2f1,365_day
+6,CMCC-CM2-SR5,historical,r5i1p2f1,365_day
+7,CMCC-CM2-SR5,historical,r6i1p2f1,365_day
+8,CMCC-CM2-SR5,historical,r7i1p2f1,365_day
+9,CMCC-CM2-SR5,piControl,r1i1p1f1,noleap
+10,CMCC-CM2-SR5,ssp126,r1i1p1f1,noleap
+11,CMCC-CM2-SR5,ssp245,r1i1p1f1,noleap
+12,CMCC-CM2-SR5,ssp370,r1i1p1f1,noleap
+13,CMCC-CM2-SR5,ssp585,r1i1p1f1,noleap

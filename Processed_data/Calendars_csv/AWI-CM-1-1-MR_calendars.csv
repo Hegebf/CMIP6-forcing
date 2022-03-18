@@ -1,0 +1,17 @@
+,model,exp,member,calendar
+0,AWI-CM-1-1-MR,1pctCO2,r1i1p1f1,proleptic_gregorian
+1,AWI-CM-1-1-MR,abrupt-4xCO2,r1i1p1f1,proleptic_gregorian
+2,AWI-CM-1-1-MR,historical,r1i1p1f1,proleptic_gregorian
+3,AWI-CM-1-1-MR,historical,r2i1p1f1,proleptic_gregorian
+4,AWI-CM-1-1-MR,historical,r3i1p1f1,proleptic_gregorian
+5,AWI-CM-1-1-MR,historical,r4i1p1f1,proleptic_gregorian
+6,AWI-CM-1-1-MR,historical,r5i1p1f1,proleptic_gregorian
+7,AWI-CM-1-1-MR,piControl,r1i1p1f1,proleptic_gregorian
+8,AWI-CM-1-1-MR,ssp126,r1i1p1f1,proleptic_gregorian
+9,AWI-CM-1-1-MR,ssp245,r1i1p1f1,proleptic_gregorian
+10,AWI-CM-1-1-MR,ssp370,r1i1p1f1,proleptic_gregorian
+11,AWI-CM-1-1-MR,ssp370,r2i1p1f1,proleptic_gregorian
+12,AWI-CM-1-1-MR,ssp370,r3i1p1f1,proleptic_gregorian
+13,AWI-CM-1-1-MR,ssp370,r4i1p1f1,proleptic_gregorian
+14,AWI-CM-1-1-MR,ssp370,r5i1p1f1,proleptic_gregorian
+15,AWI-CM-1-1-MR,ssp585,r1i1p1f1,proleptic_gregorian

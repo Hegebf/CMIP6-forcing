@@ -1,0 +1,401 @@
+,model,exp,member,parent_experiment_id,parent_variant_id,branch_time_in_child,branch_time_in_parent,parent_time_units,branch_method
+0,EC-Earth3,1pctCO2,r3i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+1,EC-Earth3,abrupt-4xCO2,r3i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+2,EC-Earth3,abrupt-4xCO2,r8i1p1f1,piControl,r1i1p1f1,0.0,252017.,days since 1850-01-01,standard
+3,EC-Earth3,historical,r101i1p1f1,-,-,-,-,-,-
+4,EC-Earth3,historical,r102i1p1f1,-,-,-,-,-,-
+5,EC-Earth3,historical,r103i1p1f1,-,-,-,-,-,-
+6,EC-Earth3,historical,r104i1p1f1,-,-,-,-,-,-
+7,EC-Earth3,historical,r105i1p1f1,-,-,-,-,-,-
+8,EC-Earth3,historical,r106i1p1f1,-,-,-,-,-,-
+9,EC-Earth3,historical,r107i1p1f1,-,-,-,-,-,-
+10,EC-Earth3,historical,r108i1p1f1,-,-,-,-,-,-
+11,EC-Earth3,historical,r109i1p1f1,-,-,-,-,-,-
+12,EC-Earth3,historical,r10i1p1f1,piControl,r1i1p1f1,0.0,281235.0,days since 1850-01-01,standard
+13,EC-Earth3,historical,r110i1p1f1,-,-,-,-,-,-
+14,EC-Earth3,historical,r111i1p1f1,-,-,-,-,-,-
+15,EC-Earth3,historical,r112i1p1f1,-,-,-,-,-,-
+16,EC-Earth3,historical,r113i1p1f1,-,-,-,-,-,-
+17,EC-Earth3,historical,r114i1p1f1,-,-,-,-,-,-
+18,EC-Earth3,historical,r115i1p1f1,-,-,-,-,-,-
+19,EC-Earth3,historical,r116i1p1f1,-,-,-,-,-,-
+20,EC-Earth3,historical,r117i1p1f1,-,-,-,-,-,-
+21,EC-Earth3,historical,r118i1p1f1,-,-,-,-,-,-
+22,EC-Earth3,historical,r119i1p1f1,-,-,-,-,-,-
+23,EC-Earth3,historical,r11i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+24,EC-Earth3,historical,r120i1p1f1,-,-,-,-,-,-
+25,EC-Earth3,historical,r121i1p1f1,-,-,-,-,-,-
+26,EC-Earth3,historical,r122i1p1f1,-,-,-,-,-,-
+27,EC-Earth3,historical,r123i1p1f1,-,-,-,-,-,-
+28,EC-Earth3,historical,r124i1p1f1,-,-,-,-,-,-
+29,EC-Earth3,historical,r125i1p1f1,-,-,-,-,-,-
+30,EC-Earth3,historical,r126i1p1f1,-,-,-,-,-,-
+31,EC-Earth3,historical,r127i1p1f1,-,-,-,-,-,-
+32,EC-Earth3,historical,r128i1p1f1,-,-,-,-,-,-
+33,EC-Earth3,historical,r129i1p1f1,-,-,-,-,-,-
+34,EC-Earth3,historical,r12i1p1f1,piControl,r1i1p1f1,0.0,310455.0,days since 1850-01-01,standard
+35,EC-Earth3,historical,r130i1p1f1,-,-,-,-,-,-
+36,EC-Earth3,historical,r131i1p1f1,-,-,-,-,-,-
+37,EC-Earth3,historical,r132i1p1f1,-,-,-,-,-,-
+38,EC-Earth3,historical,r133i1p1f1,-,-,-,-,-,-
+39,EC-Earth3,historical,r134i1p1f1,-,-,-,-,-,-
+40,EC-Earth3,historical,r135i1p1f1,-,-,-,-,-,-
+41,EC-Earth3,historical,r136i1p1f1,-,-,-,-,-,-
+42,EC-Earth3,historical,r137i1p1f1,-,-,-,-,-,-
+43,EC-Earth3,historical,r138i1p1f1,-,-,-,-,-,-
+44,EC-Earth3,historical,r139i1p1f1,-,-,-,-,-,-
+45,EC-Earth3,historical,r13i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+46,EC-Earth3,historical,r140i1p1f1,-,-,-,-,-,-
+47,EC-Earth3,historical,r141i1p1f1,-,-,-,-,-,-
+48,EC-Earth3,historical,r142i1p1f1,-,-,-,-,-,-
+49,EC-Earth3,historical,r143i1p1f1,-,-,-,-,-,-
+50,EC-Earth3,historical,r144i1p1f1,-,-,-,-,-,-
+51,EC-Earth3,historical,r145i1p1f1,-,-,-,-,-,-
+52,EC-Earth3,historical,r146i1p1f1,-,-,-,-,-,-
+53,EC-Earth3,historical,r147i1p1f1,-,-,-,-,-,-
+54,EC-Earth3,historical,r148i1p1f1,-,-,-,-,-,-
+55,EC-Earth3,historical,r149i1p1f1,-,-,-,-,-,-
+56,EC-Earth3,historical,r14i1p1f1,piControl,r1i1p1f1,0.0,157053.0,days since 1850-01-01,standard
+57,EC-Earth3,historical,r150i1p1f1,-,-,-,-,-,-
+58,EC-Earth3,historical,r15i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+59,EC-Earth3,historical,r16i1p1f1,piControl,r1i1p1f1,0.0,186272.0,days since 1850-01-01,standard
+60,EC-Earth3,historical,r17i1p1f1,piControl,r1i1p1f1,0.0,200882.0,days since 1850-01-01,standard
+61,EC-Earth3,historical,r18i1p1f1,piControl,r1i1p1f1,0.0,215492.0,days since 1850-01-01,standard
+62,EC-Earth3,historical,r19i1p1f1,piControl,r1i1p1f1,0.0,230102.0,days since 1850-01-01,standard
+63,EC-Earth3,historical,r1i1p1f1,piControl,r1i1p1f1,0.0,149749.0,days since 1850-01-01,standard
+64,EC-Earth3,historical,r20i1p1f1,piControl,r1i1p1f1,0.0,244711.0,days since 1850-01-01,standard
+65,EC-Earth3,historical,r21i1p1f1,piControl,r1i1p1f1,0.0,259321.0,days since 1850-01-01,standard
+66,EC-Earth3,historical,r22i1p1f1,piControl,r1i1p1f1,0.0,273931.0,days since 1850-01-01,standard
+67,EC-Earth3,historical,r23i1p1f1,piControl,r1i1p1f1,0.0,288540.0,days since 1850-01-01,standard
+68,EC-Earth3,historical,r24i1p1f1,piControl,r1i1p1f1,0.0,303150.0,days since 1850-01-01,standard
+69,EC-Earth3,historical,r25i1p1f1,piControl,r1i1p1f1,0.0,288540.0,days since 1850-01-01,standard
+70,EC-Earth3,historical,r2i1p1f1,piControl,r1i1p1f1,0.0,164358.0,days since 1850-01-01,standard
+71,EC-Earth3,historical,r4i1p1f1,piControl,r1i1p1f1,0.0,193578.,days since 1850-01-01,standard
+72,EC-Earth3,historical,r6i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+73,EC-Earth3,historical,r7i1p1f1,piControl,r1i1p1f1,0.0,237407.0,days since 1850-01-01,standard
+74,EC-Earth3,historical,r9i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+75,EC-Earth3,piClim-4xCO2,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+76,EC-Earth3,piClim-control,r1i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+77,EC-Earth3,piClim-control,r2i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+78,EC-Earth3,piClim-histall,r2i1p1f1,piControl,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+79,EC-Earth3,piControl,r1i1p1f1,piControl,r1i1p1f1,149384.0,0.0,days since 1850-01-01,standard
+80,EC-Earth3,piControl,r2i1p1f1,piControl-spinup,r1i1p1f1,0.0,0.0,days since 1850-01-01,none provided
+81,EC-Earth3,ssp119,r101i1p1f1,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+82,EC-Earth3,ssp119,r102i1p1f1,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+83,EC-Earth3,ssp119,r103i1p1f1,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+84,EC-Earth3,ssp119,r104i1p1f1,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+85,EC-Earth3,ssp119,r105i1p1f1,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+86,EC-Earth3,ssp119,r106i1p1f1,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+87,EC-Earth3,ssp119,r107i1p1f1,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+88,EC-Earth3,ssp119,r108i1p1f1,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+89,EC-Earth3,ssp119,r109i1p1f1,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+90,EC-Earth3,ssp119,r110i1p1f1,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+91,EC-Earth3,ssp119,r111i1p1f1,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+92,EC-Earth3,ssp119,r112i1p1f1,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+93,EC-Earth3,ssp119,r113i1p1f1,historical,r113i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+94,EC-Earth3,ssp119,r114i1p1f1,historical,r114i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+95,EC-Earth3,ssp119,r115i1p1f1,historical,r115i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+96,EC-Earth3,ssp119,r116i1p1f1,historical,r116i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+97,EC-Earth3,ssp119,r117i1p1f1,historical,r117i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+98,EC-Earth3,ssp119,r118i1p1f1,historical,r118i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+99,EC-Earth3,ssp119,r119i1p1f1,historical,r119i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+100,EC-Earth3,ssp119,r120i1p1f1,historical,r120i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+101,EC-Earth3,ssp119,r121i1p1f1,historical,r121i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+102,EC-Earth3,ssp119,r122i1p1f1,historical,r122i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+103,EC-Earth3,ssp119,r123i1p1f1,historical,r123i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+104,EC-Earth3,ssp119,r124i1p1f1,historical,r124i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+105,EC-Earth3,ssp119,r125i1p1f1,historical,r125i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+106,EC-Earth3,ssp119,r126i1p1f1,historical,r126i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+107,EC-Earth3,ssp119,r127i1p1f1,historical,r127i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+108,EC-Earth3,ssp119,r128i1p1f1,historical,r128i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+109,EC-Earth3,ssp119,r129i1p1f1,historical,r129i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+110,EC-Earth3,ssp119,r130i1p1f1,historical,r130i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+111,EC-Earth3,ssp119,r131i1p1f1,historical,r131i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+112,EC-Earth3,ssp119,r132i1p1f1,historical,r132i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+113,EC-Earth3,ssp119,r133i1p1f1,historical,r133i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+114,EC-Earth3,ssp119,r134i1p1f1,historical,r134i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+115,EC-Earth3,ssp119,r135i1p1f1,historical,r135i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+116,EC-Earth3,ssp119,r136i1p1f1,historical,r136i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+117,EC-Earth3,ssp119,r137i1p1f1,historical,r137i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+118,EC-Earth3,ssp119,r138i1p1f1,historical,r138i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+119,EC-Earth3,ssp119,r139i1p1f1,historical,r139i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+120,EC-Earth3,ssp119,r140i1p1f1,historical,r140i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+121,EC-Earth3,ssp119,r141i1p1f1,historical,r141i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+122,EC-Earth3,ssp119,r142i1p1f1,historical,r142i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+123,EC-Earth3,ssp119,r143i1p1f1,historical,r143i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+124,EC-Earth3,ssp119,r144i1p1f1,historical,r144i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+125,EC-Earth3,ssp119,r145i1p1f1,historical,r145i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+126,EC-Earth3,ssp119,r146i1p1f1,historical,r146i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+127,EC-Earth3,ssp119,r147i1p1f1,historical,r147i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+128,EC-Earth3,ssp119,r148i1p1f1,historical,r148i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+129,EC-Earth3,ssp119,r149i1p1f1,historical,r149i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+130,EC-Earth3,ssp119,r150i1p1f1,historical,r150i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+131,EC-Earth3,ssp119,r4i1p1f1,historical,r4i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+132,EC-Earth3,ssp126,r101i1p1f1,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+133,EC-Earth3,ssp126,r102i1p1f1,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+134,EC-Earth3,ssp126,r103i1p1f1,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+135,EC-Earth3,ssp126,r104i1p1f1,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+136,EC-Earth3,ssp126,r105i1p1f1,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+137,EC-Earth3,ssp126,r106i1p1f1,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+138,EC-Earth3,ssp126,r107i1p1f1,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+139,EC-Earth3,ssp126,r108i1p1f1,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+140,EC-Earth3,ssp126,r109i1p1f1,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+141,EC-Earth3,ssp126,r110i1p1f1,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+142,EC-Earth3,ssp126,r111i1p1f1,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+143,EC-Earth3,ssp126,r112i1p1f1,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+144,EC-Earth3,ssp126,r113i1p1f1,historical,r113i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+145,EC-Earth3,ssp126,r114i1p1f1,historical,r114i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+146,EC-Earth3,ssp126,r115i1p1f1,historical,r115i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+147,EC-Earth3,ssp126,r116i1p1f1,historical,r116i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+148,EC-Earth3,ssp126,r117i1p1f1,historical,r117i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+149,EC-Earth3,ssp126,r118i1p1f1,historical,r118i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+150,EC-Earth3,ssp126,r119i1p1f1,historical,r119i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+151,EC-Earth3,ssp126,r11i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+152,EC-Earth3,ssp126,r120i1p1f1,historical,r120i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+153,EC-Earth3,ssp126,r121i1p1f1,historical,r121i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+154,EC-Earth3,ssp126,r122i1p1f1,historical,r122i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+155,EC-Earth3,ssp126,r123i1p1f1,historical,r123i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+156,EC-Earth3,ssp126,r124i1p1f1,historical,r124i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+157,EC-Earth3,ssp126,r125i1p1f1,historical,r125i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+158,EC-Earth3,ssp126,r126i1p1f1,historical,r126i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+159,EC-Earth3,ssp126,r127i1p1f1,historical,r127i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+160,EC-Earth3,ssp126,r128i1p1f1,historical,r128i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+161,EC-Earth3,ssp126,r129i1p1f1,historical,r129i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+162,EC-Earth3,ssp126,r130i1p1f1,historical,r130i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+163,EC-Earth3,ssp126,r131i1p1f1,historical,r131i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+164,EC-Earth3,ssp126,r132i1p1f1,historical,r132i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+165,EC-Earth3,ssp126,r133i1p1f1,historical,r133i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+166,EC-Earth3,ssp126,r134i1p1f1,historical,r134i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+167,EC-Earth3,ssp126,r135i1p1f1,historical,r135i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+168,EC-Earth3,ssp126,r136i1p1f1,historical,r136i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+169,EC-Earth3,ssp126,r137i1p1f1,historical,r137i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+170,EC-Earth3,ssp126,r138i1p1f1,historical,r138i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+171,EC-Earth3,ssp126,r139i1p1f1,historical,r139i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+172,EC-Earth3,ssp126,r13i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+173,EC-Earth3,ssp126,r140i1p1f1,historical,r140i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+174,EC-Earth3,ssp126,r141i1p1f1,historical,r141i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+175,EC-Earth3,ssp126,r142i1p1f1,historical,r142i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+176,EC-Earth3,ssp126,r143i1p1f1,historical,r143i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+177,EC-Earth3,ssp126,r144i1p1f1,historical,r144i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+178,EC-Earth3,ssp126,r145i1p1f1,historical,r145i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+179,EC-Earth3,ssp126,r146i1p1f1,historical,r146i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+180,EC-Earth3,ssp126,r147i1p1f1,historical,r147i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+181,EC-Earth3,ssp126,r148i1p1f1,historical,r148i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+182,EC-Earth3,ssp126,r149i1p1f1,historical,r149i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+183,EC-Earth3,ssp126,r150i1p1f1,historical,r150i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+184,EC-Earth3,ssp126,r15i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+185,EC-Earth3,ssp126,r1i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+186,EC-Earth3,ssp126,r4i1p1f1,historical,r4i1p1f1,60265.,60265.,days since 1850-01-01,standard
+187,EC-Earth3,ssp126,r6i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+188,EC-Earth3,ssp126,r9i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+189,EC-Earth3,ssp245,r101i1p1f1,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+190,EC-Earth3,ssp245,r102i1p1f1,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+191,EC-Earth3,ssp245,r103i1p1f1,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+192,EC-Earth3,ssp245,r104i1p1f1,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+193,EC-Earth3,ssp245,r105i1p1f1,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+194,EC-Earth3,ssp245,r106i1p1f1,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+195,EC-Earth3,ssp245,r107i1p1f1,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+196,EC-Earth3,ssp245,r108i1p1f1,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+197,EC-Earth3,ssp245,r109i1p1f1,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+198,EC-Earth3,ssp245,r10i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+199,EC-Earth3,ssp245,r10i1p1f2,historical,r23i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+200,EC-Earth3,ssp245,r110i1p1f1,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+201,EC-Earth3,ssp245,r111i1p1f1,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+202,EC-Earth3,ssp245,r112i1p1f1,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+203,EC-Earth3,ssp245,r113i1p1f1,historical,r113i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+204,EC-Earth3,ssp245,r114i1p1f1,historical,r114i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+205,EC-Earth3,ssp245,r115i1p1f1,historical,r115i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+206,EC-Earth3,ssp245,r116i1p1f1,historical,r116i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+207,EC-Earth3,ssp245,r117i1p1f1,historical,r117i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+208,EC-Earth3,ssp245,r118i1p1f1,historical,r118i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+209,EC-Earth3,ssp245,r119i1p1f1,historical,r119i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+210,EC-Earth3,ssp245,r11i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+211,EC-Earth3,ssp245,r120i1p1f1,historical,r120i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+212,EC-Earth3,ssp245,r121i1p1f1,historical,r121i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+213,EC-Earth3,ssp245,r122i1p1f1,historical,r122i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+214,EC-Earth3,ssp245,r123i1p1f1,historical,r123i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+215,EC-Earth3,ssp245,r124i1p1f1,historical,r124i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+216,EC-Earth3,ssp245,r125i1p1f1,historical,r125i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+217,EC-Earth3,ssp245,r126i1p1f1,historical,r126i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+218,EC-Earth3,ssp245,r127i1p1f1,historical,r127i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+219,EC-Earth3,ssp245,r128i1p1f1,historical,r128i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+220,EC-Earth3,ssp245,r129i1p1f1,historical,r129i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+221,EC-Earth3,ssp245,r12i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+222,EC-Earth3,ssp245,r12i1p1f2,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+223,EC-Earth3,ssp245,r130i1p1f1,historical,r130i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+224,EC-Earth3,ssp245,r131i1p1f1,historical,r131i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+225,EC-Earth3,ssp245,r132i1p1f1,historical,r132i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+226,EC-Earth3,ssp245,r133i1p1f1,historical,r133i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+227,EC-Earth3,ssp245,r134i1p1f1,historical,r134i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+228,EC-Earth3,ssp245,r135i1p1f1,historical,r135i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+229,EC-Earth3,ssp245,r136i1p1f1,historical,r136i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+230,EC-Earth3,ssp245,r137i1p1f1,historical,r137i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+231,EC-Earth3,ssp245,r138i1p1f1,historical,r138i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+232,EC-Earth3,ssp245,r139i1p1f1,historical,r139i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+233,EC-Earth3,ssp245,r13i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+234,EC-Earth3,ssp245,r13i1p1f2,historical,r14i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+235,EC-Earth3,ssp245,r140i1p1f1,historical,r140i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+236,EC-Earth3,ssp245,r141i1p1f1,historical,r141i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+237,EC-Earth3,ssp245,r142i1p1f1,historical,r142i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+238,EC-Earth3,ssp245,r143i1p1f1,historical,r143i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+239,EC-Earth3,ssp245,r144i1p1f1,historical,r144i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+240,EC-Earth3,ssp245,r145i1p1f1,historical,r145i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+241,EC-Earth3,ssp245,r146i1p1f1,historical,r146i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+242,EC-Earth3,ssp245,r147i1p1f1,historical,r147i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+243,EC-Earth3,ssp245,r148i1p1f1,historical,r148i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+244,EC-Earth3,ssp245,r149i1p1f1,historical,r149i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+245,EC-Earth3,ssp245,r14i1p1f1,historical,r1i1p1f1,0.0,157053.0,days since 1850-01-01,standard
+246,EC-Earth3,ssp245,r150i1p1f1,historical,r150i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+247,EC-Earth3,ssp245,r15i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+248,EC-Earth3,ssp245,r15i1p1f2,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+249,EC-Earth3,ssp245,r16i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+250,EC-Earth3,ssp245,r16i1p1f2,historical,r21i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+251,EC-Earth3,ssp245,r17i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+252,EC-Earth3,ssp245,r17i1p1f2,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+253,EC-Earth3,ssp245,r18i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+254,EC-Earth3,ssp245,r18i1p1f2,historical,r25i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+255,EC-Earth3,ssp245,r19i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+256,EC-Earth3,ssp245,r19i1p1f2,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+257,EC-Earth3,ssp245,r1i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+258,EC-Earth3,ssp245,r1i1p1f2,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+259,EC-Earth3,ssp245,r20i1p1f2,historical,r2i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+260,EC-Earth3,ssp245,r21i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+261,EC-Earth3,ssp245,r21i1p1f2,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+262,EC-Earth3,ssp245,r22i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+263,EC-Earth3,ssp245,r22i1p1f2,historical,r22i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+264,EC-Earth3,ssp245,r23i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+265,EC-Earth3,ssp245,r23i1p1f2,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+266,EC-Earth3,ssp245,r24i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+267,EC-Earth3,ssp245,r24i1p1f2,historical,r24i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+268,EC-Earth3,ssp245,r25i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+269,EC-Earth3,ssp245,r25i1p1f2,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+270,EC-Earth3,ssp245,r26i1p1f2,historical,r18i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+271,EC-Earth3,ssp245,r27i1p1f2,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+272,EC-Earth3,ssp245,r28i1p1f2,historical,r7i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+273,EC-Earth3,ssp245,r29i1p1f2,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+274,EC-Earth3,ssp245,r2i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+275,EC-Earth3,ssp245,r2i1p1f2,historical,r4i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+276,EC-Earth3,ssp245,r30i1p1f2,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+277,EC-Earth3,ssp245,r4i1p1f1,historical,r4i1p1f1,60265.,60265.,days since 1850-01-01,standard
+278,EC-Earth3,ssp245,r4i1p1f2,historical,r16i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+279,EC-Earth3,ssp245,r6i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+280,EC-Earth3,ssp245,r6i1p1f2,historical,r3i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+281,EC-Earth3,ssp245,r7i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+282,EC-Earth3,ssp245,r7i1p1f2,historical,r1i1p1f2,60265.0,60265.0,days since 1850-01-01,standard
+283,EC-Earth3,ssp245,r8i1p1f2,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+284,EC-Earth3,ssp245,r9i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+285,EC-Earth3,ssp370,r101i1p1f1,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+286,EC-Earth3,ssp370,r102i1p1f1,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+287,EC-Earth3,ssp370,r103i1p1f1,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+288,EC-Earth3,ssp370,r104i1p1f1,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+289,EC-Earth3,ssp370,r105i1p1f1,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+290,EC-Earth3,ssp370,r106i1p1f1,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+291,EC-Earth3,ssp370,r107i1p1f1,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+292,EC-Earth3,ssp370,r108i1p1f1,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+293,EC-Earth3,ssp370,r109i1p1f1,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+294,EC-Earth3,ssp370,r110i1p1f1,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+295,EC-Earth3,ssp370,r111i1p1f1,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+296,EC-Earth3,ssp370,r112i1p1f1,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+297,EC-Earth3,ssp370,r113i1p1f1,historical,r113i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+298,EC-Earth3,ssp370,r114i1p1f1,historical,r114i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+299,EC-Earth3,ssp370,r115i1p1f1,historical,r115i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+300,EC-Earth3,ssp370,r116i1p1f1,historical,r116i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+301,EC-Earth3,ssp370,r117i1p1f1,historical,r117i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+302,EC-Earth3,ssp370,r118i1p1f1,historical,r118i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+303,EC-Earth3,ssp370,r119i1p1f1,historical,r119i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+304,EC-Earth3,ssp370,r11i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+305,EC-Earth3,ssp370,r120i1p1f1,historical,r120i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+306,EC-Earth3,ssp370,r121i1p1f1,historical,r121i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+307,EC-Earth3,ssp370,r122i1p1f1,historical,r122i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+308,EC-Earth3,ssp370,r123i1p1f1,historical,r123i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+309,EC-Earth3,ssp370,r124i1p1f1,historical,r124i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+310,EC-Earth3,ssp370,r125i1p1f1,historical,r125i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+311,EC-Earth3,ssp370,r126i1p1f1,historical,r126i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+312,EC-Earth3,ssp370,r127i1p1f1,historical,r127i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+313,EC-Earth3,ssp370,r128i1p1f1,historical,r128i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+314,EC-Earth3,ssp370,r129i1p1f1,historical,r129i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+315,EC-Earth3,ssp370,r130i1p1f1,historical,r130i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+316,EC-Earth3,ssp370,r131i1p1f1,historical,r131i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+317,EC-Earth3,ssp370,r132i1p1f1,historical,r132i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+318,EC-Earth3,ssp370,r133i1p1f1,historical,r133i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+319,EC-Earth3,ssp370,r134i1p1f1,historical,r134i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+320,EC-Earth3,ssp370,r135i1p1f1,historical,r135i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+321,EC-Earth3,ssp370,r136i1p1f1,historical,r136i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+322,EC-Earth3,ssp370,r137i1p1f1,historical,r137i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+323,EC-Earth3,ssp370,r138i1p1f1,historical,r138i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+324,EC-Earth3,ssp370,r139i1p1f1,historical,r139i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+325,EC-Earth3,ssp370,r13i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+326,EC-Earth3,ssp370,r140i1p1f1,historical,r140i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+327,EC-Earth3,ssp370,r141i1p1f1,historical,r141i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+328,EC-Earth3,ssp370,r142i1p1f1,historical,r142i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+329,EC-Earth3,ssp370,r143i1p1f1,historical,r143i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+330,EC-Earth3,ssp370,r144i1p1f1,historical,r144i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+331,EC-Earth3,ssp370,r145i1p1f1,historical,r145i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+332,EC-Earth3,ssp370,r146i1p1f1,historical,r146i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+333,EC-Earth3,ssp370,r147i1p1f1,historical,r147i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+334,EC-Earth3,ssp370,r148i1p1f1,historical,r148i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+335,EC-Earth3,ssp370,r149i1p1f1,historical,r149i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+336,EC-Earth3,ssp370,r150i1p1f1,historical,r150i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+337,EC-Earth3,ssp370,r15i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+338,EC-Earth3,ssp370,r1i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+339,EC-Earth3,ssp370,r4i1p1f1,historical,r4i1p1f1,60265.,60265.,days since 1850-01-01,standard
+340,EC-Earth3,ssp370,r6i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+341,EC-Earth3,ssp370,r9i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+342,EC-Earth3,ssp585,r101i1p1f1,historical,r101i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+343,EC-Earth3,ssp585,r102i1p1f1,historical,r102i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+344,EC-Earth3,ssp585,r103i1p1f1,historical,r103i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+345,EC-Earth3,ssp585,r104i1p1f1,historical,r104i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+346,EC-Earth3,ssp585,r105i1p1f1,historical,r105i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+347,EC-Earth3,ssp585,r106i1p1f1,historical,r106i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+348,EC-Earth3,ssp585,r107i1p1f1,historical,r107i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+349,EC-Earth3,ssp585,r108i1p1f1,historical,r108i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+350,EC-Earth3,ssp585,r109i1p1f1,historical,r109i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+351,EC-Earth3,ssp585,r110i1p1f1,historical,r110i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+352,EC-Earth3,ssp585,r111i1p1f1,historical,r111i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+353,EC-Earth3,ssp585,r112i1p1f1,historical,r112i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+354,EC-Earth3,ssp585,r113i1p1f1,historical,r113i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+355,EC-Earth3,ssp585,r114i1p1f1,historical,r114i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+356,EC-Earth3,ssp585,r115i1p1f1,historical,r115i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+357,EC-Earth3,ssp585,r116i1p1f1,historical,r116i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+358,EC-Earth3,ssp585,r117i1p1f1,historical,r117i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+359,EC-Earth3,ssp585,r118i1p1f1,historical,r118i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+360,EC-Earth3,ssp585,r119i1p1f1,historical,r119i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+361,EC-Earth3,ssp585,r11i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+362,EC-Earth3,ssp585,r120i1p1f1,historical,r120i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+363,EC-Earth3,ssp585,r121i1p1f1,historical,r121i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+364,EC-Earth3,ssp585,r122i1p1f1,historical,r122i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+365,EC-Earth3,ssp585,r123i1p1f1,historical,r123i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+366,EC-Earth3,ssp585,r124i1p1f1,historical,r124i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+367,EC-Earth3,ssp585,r125i1p1f1,historical,r125i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+368,EC-Earth3,ssp585,r126i1p1f1,historical,r126i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+369,EC-Earth3,ssp585,r127i1p1f1,historical,r127i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+370,EC-Earth3,ssp585,r128i1p1f1,historical,r128i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+371,EC-Earth3,ssp585,r129i1p1f1,historical,r129i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+372,EC-Earth3,ssp585,r130i1p1f1,historical,r130i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+373,EC-Earth3,ssp585,r131i1p1f1,historical,r131i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+374,EC-Earth3,ssp585,r132i1p1f1,historical,r132i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+375,EC-Earth3,ssp585,r133i1p1f1,historical,r133i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+376,EC-Earth3,ssp585,r134i1p1f1,historical,r134i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+377,EC-Earth3,ssp585,r135i1p1f1,historical,r135i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+378,EC-Earth3,ssp585,r136i1p1f1,historical,r136i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+379,EC-Earth3,ssp585,r137i1p1f1,historical,r137i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+380,EC-Earth3,ssp585,r138i1p1f1,historical,r138i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+381,EC-Earth3,ssp585,r139i1p1f1,historical,r139i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+382,EC-Earth3,ssp585,r13i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+383,EC-Earth3,ssp585,r140i1p1f1,historical,r140i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+384,EC-Earth3,ssp585,r141i1p1f1,historical,r141i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+385,EC-Earth3,ssp585,r142i1p1f1,historical,r142i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+386,EC-Earth3,ssp585,r143i1p1f1,historical,r143i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+387,EC-Earth3,ssp585,r144i1p1f1,historical,r144i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+388,EC-Earth3,ssp585,r145i1p1f1,historical,r145i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+389,EC-Earth3,ssp585,r146i1p1f1,historical,r146i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+390,EC-Earth3,ssp585,r147i1p1f1,historical,r147i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+391,EC-Earth3,ssp585,r148i1p1f1,historical,r148i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+392,EC-Earth3,ssp585,r149i1p1f1,historical,r149i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+393,EC-Earth3,ssp585,r150i1p1f1,historical,r150i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+394,EC-Earth3,ssp585,r15i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+395,EC-Earth3,ssp585,r1i1p1f1,historical,r1i1p1f1,60265.0,60265.0,days since 1850-01-01,standard
+396,EC-Earth3,ssp585,r3i1p1f1,historical,r3i1p1f1,0.0,0.0,days since 1850-01-01,standard
+397,EC-Earth3,ssp585,r4i1p1f1,historical,r4i1p1f1,60265.,60265.,days since 1850-01-01,standard
+398,EC-Earth3,ssp585,r6i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
+399,EC-Earth3,ssp585,r9i1p1f1,historical,r1i1p1f1,0.0,0.0,days since 1850-01-01,standard
