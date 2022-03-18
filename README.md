@@ -13,4 +13,12 @@ Some files are not used because they contain errors. Info about these are stored
 All data not available in GoogleCloud are downloaded. This includes also some files that we found to be in GoogleCloud, but which contained errors: cloud-buterrors.json.
 
 ## Step 2: Constructing global annual means and anomalies
+The code for this work is stored in the folder Data_processing, and the results are stored in the folder Processed_data.
+When constructing global means, we load as many datasets as possible from the cloud. This step is done in the notebook Cloud_averaging, and functions used for averaging are stored in global_annual_means.py. Everything that cannot be loaded from the cloud is downloaded instead, either with wget scripts generated from https://esgf-node.llnl.gov/projects/cmip6/ or from wget scripts generated in the notebook wget_and_averaging. Global means of downloaded files are also constructed in this notebook.
+
+In the next step we read and save all calendar and branch information from the metadata. This is done with the notebooks branch_years and model_calendars.
+
+Finally, we use all this information to construct global annual anomalies in the notebook Global_anomalies, with help from the functions stored in processing_functions.py.
+
+## Step 3: Estimate forcing from the global annual anomalies
 
