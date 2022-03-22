@@ -201,6 +201,15 @@ def load_anom(model, exp, member, length_restriction = None):
     return data
     
 def branch_info_corrections(branch_info_table):
+    
+    # remove spaces in parent exp names for some models (e.g. CNRM-CM6-1-HR):
+    parent_exps = branch_info_table['parent_experiment_id']
+    for (k,parent_member) in enumerate(parent_exps): #range(len(parent_exps)):
+        #parent_member = parent_exps[k]
+        if ' ' in parent_member:
+            parent_member = parent_member.replace(' ', '')
+            branch_info_table['parent_experiment_id'][k] = parent_member
+            
     model = branch_info_table['model'][0] # all elements are the same, so just take the first
     experiments = list(branch_info_table['exp'].unique())
     for exp in experiments:
@@ -214,10 +223,11 @@ def branch_info_corrections(branch_info_table):
             # if not, correct parent info if possible
             parent_exp = member_df['parent_experiment_id'].values[0]
             parent_member = member_df['parent_variant_id'].values[0]
+                
             parent_exp_df = branch_info_table.loc[branch_info_table['exp'] == parent_exp]
             parent_member_df = parent_exp_df.loc[parent_exp_df['member'] == parent_member]
             if parent_member_df.empty and exp != 'piControl':
-                print('Parent', parent_exp, parent_member, 'does not exist for:', exp, member)
+                print('\n', 'Parent', parent_exp, parent_member, 'does not exist for:', exp, member)
                 if len(parent_exp_df) == 1:
                     alt_parent_member = parent_exp_df['member'].values[0]
                     branch_info_table.at[ind, 'parent_variant_id'] = alt_parent_member
@@ -225,9 +235,32 @@ def branch_info_corrections(branch_info_table):
                 else:
                     print('Please tell this function how to select a parent member from', '\n', \
                     'the other alternative parent members available:', parent_exp, parent_exp_df['member'].values)
-                    if model == 'IPSL-CM6A-LR' and parent_exp == 'piControl':
+                    if model == 'EC-Earth3' and exp == 'historical':
+                        r_value = int(member.split("r")[1].split("i")[0])
+                        if r_value >= 100: # then we have a member of SMHI-LENS
+                            # these historical runs start in year 1970, and have no branch info in file metadata
+                            
+                    elif model == 'IPSL-CM6A-LR' and parent_exp == 'piControl':
                         alt_parent_member = 'r1i1p1f1'
-                    
+                    elif model in ['GISS-E2-1-G']:
+                        if exp[:6] == 'piClim' and parent_member == 'r1i1p3f2':
+                            alt_parent_member = 'r1i1p1f2'
+                            print('this will not be used for computing anomalies anyway')  
+                        elif exp in ssp_exp and 'p5' in parent_member:
+                            alt_parent_member = parent_member.replace('p5', 'p1') # probably.
+                    elif model in ['GISS-E2-1-H']:
+                        if 'p5' in parent_member:
+                            if exp in idealised_exp or exp in hist_exp:
+                                alt_parent_member = parent_member.replace('p5', 'p3') # possibly? 
+                                # since there exists no piControl p5, and when referred to,
+                                # it has the same time unit and branch time as for p3
+                    elif model in ['MRI-ESM2-0']:
+                        if exp in ssp_exp and 'i3' in parent_member:
+                            alt_parent_member = parent_member.replace('i3', 'i1') # probably. 
+                            print('parent_member')
+                    elif model in ['UKESM1-0-LL']:
+                        if exp in ssp_exp and parent_member in ['r5i1p1f2', 'r6i1p1f2', 'r7i1p1f2']:
+                            alt_parent_member = parent_member.replace('f2', 'f3') # probably, since this is what exists in esgf. 
                     print('Member', alt_parent_member, 'has been manually selected')
                     branch_info_table.at[ind, 'parent_variant_id'] = alt_parent_member
             if exp in ssp_exp:
@@ -306,7 +339,7 @@ def piControl_timeunit_correction(model, exp, member, piControl_timeunit_start_y
     return piControl_timeunit_start_year
     
     
-#### this function needs further development: ####
+#### this function may need further development: ####
 def branch_time_correction(model, exp, member, branch_time_days, piControl_timeunit_start_year, piControl_start_year, years_since_piControl_start):
     initial_years_since_piControl_start = years_since_piControl_start
     
@@ -317,11 +350,20 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
             print('Probably branched in year', int(branch_time_days))
     elif model in ['CAMS-CSM1-0']: 
         # branch times given in years instead of days for all experiments
+        # (piControl time unit is also wrong, but we don't need this)
         years_since_piControl_start = int(branch_time_days - piControl_start_year)
         print('Probably branched in year', int(branch_time_days))
     elif model in ['CAS-ESM2-0']: # timeunit seems wrong. 
-        #Should likely be years since days since 0001-01-01, when piControl starts
+        # Should likely be years since days since 0001-01-01, when piControl starts
         years_since_piControl_start = 0 
+        # I could not find a publication with description of branch times
+        # is it possible that the branch info for the ssps are the branch points for historical?
+        # (99 years for r1 and 199 years for r3 since year 1)
+        # make a guess for historical r1 - r4 based on this (year 100, 150, 200, 250):
+        if exp in hist_exp or exp in ssp_exp:
+            years_since_piControl_start = 99 + 50*(int(member[1])-1)
+        # the model does not drift very much, so eventual errors in the branch time
+        # won't make a big difference for the anomalies
     elif model in ['CIESM']:
         if exp in idealised_exp:
             years_since_piControl_start = 0 
@@ -334,13 +376,11 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
                 years_since_piControl_start = (int(member[1])-1)*100 - 1
             # histrical r2 branch in year 100, and r3 in year 200.
             # at least the model branch info is correct that the difference is 100 years between each historical member
-    elif model in ['FIO-ESM-2-0']:
-        if exp in hist_exp or exp in ssp_exp:
-            # "three realizations of historical simulation are conducted
-            # from 1 January of year 301, 330, and 350 of the PiControl run, respectively"
-            # From paper: https://doi.org/10.1029/2019JC016036
-            if member == 'r1i1p1f1':
-                years_since_piControl_start = 0
+    elif model in ['CanESM5']:
+        if exp in ['abrupt-0p5xCO2', 'abrupt-2xCO2']:
+            years_since_piControl_start = 0
+    elif model in ['EC-Earth3']:
+        pass
     elif model in ['FGOALS-f3-L']:
         if exp in idealised_exp or exp in hist_exp or exp in ssp_exp:
             piControl_branchyear = 600 + (int(member[1])-1)*50
@@ -351,91 +391,51 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
             #r2: should start in piControl year 650
             #r3: should start in piControl year 700
             years_since_piControl_start = piControl_branchyear - piControl_start_year
-    elif model in ['NorESM2-LM']:
-        if exp in idealised_exp:
-            years_since_piControl_start = 0 # because 4xCO2, 1pctCO2 branch time is the same as piControl branch time
-        elif exp in hist_exp or exp in ssp_exp: # measure branch time relative to r1 member
+    elif model in ['FGOALS-g3']:
+        if exp in hist_exp:
+            years_since_piControl_start = 170
+            # hist-aer, hist-GHG, hist-nat should branch at the same time as historical
+    elif model in ['FIO-ESM-2-0']:
+        if exp in hist_exp or exp in ssp_exp:
+            # "three realizations of historical simulation are conducted
+            # from 1 January of year 301, 330, and 350 of the PiControl run, respectively"
+            # From paper: https://doi.org/10.1029/2019JC016036
             if member == 'r1i1p1f1':
                 years_since_piControl_start = 0
-            else:
-                member_calendar = find_member_calendar(model, exp, member)
-                days_table = np.append([0],np.cumsum(dpy(piControl_start_year,piControl_start_year+500, member_calendar)))
-                branch_time_days = branch_time_days - 430335
-                # find index of element closest to branch_time_days
-                years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-                #print('days difference after correction:', days_table[years_since_piControl_start] - branch_time_days)
-    elif model in ['NorESM2-MM']:
-        years_since_piControl_start = 0 # because 4xCO2 branch time is the same as piControl branch time
-    elif model in ['UKESM1-0-LL']:
-        #piControl_start_year = 1960
-        #if exp in expgroup1:
-        #    branch_time_days = branch_time_days - 39600   
-        #    years_since_piControl_start = 0
-        if exp in idealised_exp or exp in hist_exp or exp in ssp_exp:
-            member_calendar = find_member_calendar(model, exp, member)
-            days_table = np.append([0],np.cumsum(dpy(piControl_start_year,piControl_start_year+1000, member_calendar)))
-            branch_time_days = branch_time_days - 39600
-            # find index of element closest to branch_time_days
-            years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-            print(member)
-            print(years_since_piControl_start)
-            print('days difference:', days_table[years_since_piControl_start] - branch_time_days)
     elif model in ['GFDL-CM4']:
-        piControl_start_year = 151 # found from manual check. Branch info is clearly wrong, since it lists different time units for piControl
-        if exp == 'abrupt-4xCO2':
-            years_since_piControl_start = 0
-        elif exp in hist_exp or exp in ssp_exp:
-            years_since_piControl_start = 100 # probably?   
-    elif model == 'CanESM5': 
-        if exp in idealised_exp:
-            if exp == '1pctCO2':
-                if int(member[-3]) == 1:
-                    branch_time_days = branch_time_days - 1223115 
-                elif int(member[-3]) == 2:
-                    branch_time_days = branch_time_days - 1350500
-                years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-                print(years_since_piControl_start)
-                print('days difference:', days_table[years_since_piControl_start] - branch_time_days)
-            else:
-                years_since_piControl_start = 0 # because 4xCO2 branch time is the same as piControl branch time
-        elif exp in hist_exp or exp in ssp_exp: # measure branch time relative to r1 member
-            #piControl_start_year = 5201
-            member_calendar = find_member_calendar(model, exp, member)
-            days_table = np.append([0],np.cumsum(dpy(piControl_start_year,piControl_start_year+2000, member_calendar)))  
-            if int(member[-3]) == 1:
-                branch_time_days = branch_time_days - 1223115 
-            elif int(member[-3]) == 2:
-                branch_time_days = branch_time_days - 1350500
-            # find index of element closest to branch_time_days
-            years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-            print(member)
-            print(years_since_piControl_start)
-            print('days difference:', days_table[years_since_piControl_start] - branch_time_days)
-    elif model in ['CanESM5-CanOE']:
-        if exp in idealised_exp:
-            years_since_piControl_start = 0 # because 4xCO2 branch time is the same as piControl branch time
-        #elif exp == 'historical':
-        elif exp in hist_exp or exp in ssp_exp:
-            #piControl_start_year = 5550
-            member_calendar = find_member_calendar(model, exp, member)
-            days_table = np.append([0],np.cumsum(dpy(piControl_start_year,piControl_start_year+2000, member_calendar)))  
-            branch_time_days = branch_time_days - 1350500
-            print('branch_time_days', branch_time_days)
-            # find index of element closest to branch_time_days
-            years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-            print('years_since_piControl_start', years_since_piControl_start)
+        #Branch info is clearly wrong, since it lists different time units for piControl
+        years_since_piControl_start = 100 # probably
+    elif model in ['IITM-ESM']:
+        # Time unit seems to be wrong
+        years_since_piControl_start = 0 
+    elif model in ['NorCPM1']:
+        years_since_piControl_start = 0 
+        # For all experiments, see Figure 1 in 
+        # https://doi.org/10.5194/gmd-14-7073-2021
+    elif model in ['NorESM2-MM']:
+        if member[1] == '1':
+            years_since_piControl_start -= 1 # For consistency with branch method info
+        # and because branch times are the same as piControl branch time, and piControl starts in 1200, not 1201.
     elif model in ['TaiESM1']:
-        if exp == '1pctCO2':
-            years_since_piControl_start = 701 - 201
-        elif exp == 'abrupt-4xCO2':
-            years_since_piControl_start = 701 - 201 # if we choose to trust info from branch method rather than branch_time_in_parent. This info seems to be the most correct for other experiments
-        elif exp == 'historical':
-            years_since_piControl_start = 671 - 201
-    elif model in ['EC-Earth3-Veg-LR']:
+        # if we choose to trust info from branch method
+        if exp in ['1pctCO2', 'abrupt-4xCO2']:
+            years_since_piControl_start = 500
+        elif exp in ['abrupt-2xCO2', 'abrupt-0p5xCO2']:
+            years_since_piControl_start = 300
+        elif exp == 'historical' or exp in ssp_exp:
+            years_since_piControl_start = 470
+    elif model in ['UKESM1-0-LL']:
         if exp in hist_exp or exp in ssp_exp:
-            branch_time_days = branch_time_days - 164359
-            years_since_piControl_start = (np.abs(days_table - branch_time_days)).argmin()
-            print('years_since_piControl_start', years_since_piControl_start)
+            # branch info says 0 days since 1850.
+            # Correct branch times found in https://doi.org/10.1029/2019MS001946, Table 7
+            if member[:3] == 'r13':
+                years_since_piControl_start = 2565 - piControl_start_year 
+            elif member[:3] == 'r14':
+                years_since_piControl_start = 2685 - piControl_start_year 
+            elif member[:3] == 'r15':
+                years_since_piControl_start = 2745 - piControl_start_year 
+            # other members have correct branch year (checked against table 7 in paper)
+            
     #elif model in ['KIOST-ESM'] and exp in ['historical', 'abrupt-4xCO2', '1pctCO2']:
         # piControl units: days from 1850
         #piControl_start_year = 3189 # of new version, old version in 2689

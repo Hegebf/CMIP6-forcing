@@ -99,9 +99,9 @@ def global_averaging(ds, varlist = ['tas', 'rlut', 'rsut', 'rsdt'], calendar = N
         # for some datasets we need to change these values:
         
         if model == 'NorCPM1' and exp == 'historical':
-            member = ds.variant_label
-            if member == 'r10i1p1f1':
-                lat_bnds = ds.lat_bnds.values[0,:,:]
+            #member = ds.variant_label
+            #if member == 'r10i1p1f1':
+            lat_bnds = ds.lat_bnds.values[0,:,:]
         elif exp == 'ssp585' and model == 'CESM2-WACCM':
             member = ds.variant_label
             if member == 'r1i1p1f1':
@@ -109,7 +109,8 @@ def global_averaging(ds, varlist = ['tas', 'rlut', 'rsut', 'rsdt'], calendar = N
         elif exp == 'ssp126' and model == 'CESM2-WACCM':
             member = ds.variant_label
             if member == 'r1i1p1f1':
-                lat_bnds = ds.lat_bnds.values[:,:,0]
+                lat_bnds = ds.lat_bnds.values[0,:,:]
+                #lat_bnds = ds.lat_bnds.values[:,:,0]
         elif model in ['MPI-ESM-1-2-HAM', 'EC-Earth3', 'EC-Earth3-AerChem'] and exp == 'piClim-control':
             lat_bnds = ds.lat_bnds.values[0,:,:]
             lon_bnds = ds.lon_bnds.values[0,:,:]
