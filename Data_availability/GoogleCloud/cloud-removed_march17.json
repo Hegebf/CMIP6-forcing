@@ -1,0 +1,10 @@
+{"piControl":{
+    "GISS-E2-1-G": ["r1i1p3f1"]
+  },
+  "ssp126":{
+    "MIROC-ES2L": ["r1i1p1f2", "r2i1p1f2", "r3i1p1f2"]
+  }, 
+  "ssp585":{
+    "MIROC-ES2L": ["r1i1p1f2"]
+  }
+}

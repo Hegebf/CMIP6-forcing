@@ -1,0 +1,11 @@
+{"piControl":
+    {
+    "GISS-E2-1-H":
+        ["r1i1p1f2"]
+    },
+    "historical":
+    {
+    "CNRM-ESM2-1": 
+        ["r6i1p1f2"]
+    }
+}

@@ -1,35 +1,16 @@
-{
-  "1pctCO2":
-  {
-    "FGOALS-f3-L": [
-      "r2i1p1f1",
-      "r3i1p1f1"
-    ]
+{"1pctCO2":{
+    "FGOALS-f3-L": ["r2i1p1f1", "r3i1p1f1"]
   },
-  "historical":
-    {
-      "EC-Earth3":[
-      "r1i1p1f1"
-      ],
-      "EC-Earth3-Veg": [
-        "r1i1p1f1"
-    ] 
+  "historical":{
+    "EC-Earth3": ["r1i1p1f1"],
+    "EC-Earth3-Veg": ["r1i1p1f1"] 
   }, 
-  "ssp126":
-  {
-   "ACCESS-CM2": [
-     "r1i1p1f1"
-    ],
-    "IITM-ESM": [
-      "r1i1p1f1"
-    ]
+  "ssp126":{
+   "ACCESS-CM2": ["r1i1p1f1"],
+    "IITM-ESM": ["r1i1p1f1"]
   },
-  "ssp585":
-  {"ACCESS-CM2": [
-    "r1i1p1f1"
-  ],
-  "MRI-ESM2-0": [
-    "r1i1p1f1"
-  ]
+  "ssp585":{
+    "ACCESS-CM2": ["r1i1p1f1"],
+    "MRI-ESM2-0": ["r1i1p1f1"]
   }
 }

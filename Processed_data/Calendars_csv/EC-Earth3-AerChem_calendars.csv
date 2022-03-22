@@ -2,7 +2,8 @@
 0,EC-Earth3-AerChem,1pctCO2,r1i1p1f1,proleptic_gregorian
 1,EC-Earth3-AerChem,abrupt-4xCO2,r1i1p1f1,proleptic_gregorian
 2,EC-Earth3-AerChem,historical,r1i1p1f1,proleptic_gregorian
-3,EC-Earth3-AerChem,piClim-control,r1i1p1f1,proleptic_gregorian
-4,EC-Earth3-AerChem,piControl,r1i1p1f1,proleptic_gregorian
-5,EC-Earth3-AerChem,ssp370,r1i1p1f1,proleptic_gregorian
-6,EC-Earth3-AerChem,ssp370,r4i1p1f1,proleptic_gregorian
+3,EC-Earth3-AerChem,historical,r4i1p1f1,proleptic_gregorian
+4,EC-Earth3-AerChem,piClim-control,r1i1p1f1,proleptic_gregorian
+5,EC-Earth3-AerChem,piControl,r1i1p1f1,proleptic_gregorian
+6,EC-Earth3-AerChem,ssp370,r1i1p1f1,proleptic_gregorian
+7,EC-Earth3-AerChem,ssp370,r4i1p1f1,proleptic_gregorian
