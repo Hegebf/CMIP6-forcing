@@ -71,6 +71,7 @@ def global_averaging(ds, varlist = ['tas', 'rlut', 'rsut', 'rsdt'], calendar = N
         if member in ['r11i1p1f1', 'r13i1p1f1', 'r15i1p1f1']:
             # remove the first december value
             ds = ds.isel(time=np.arange(1,len(ds.time)))
+            firstmonth = 1 # set first month to jan after removing the first december month
       
     
     
@@ -330,7 +331,7 @@ def filecheck(filestr, all_files):
             return True
         
 def missing_esgf_test(exp, model, member):
-    with open('../Data_availability/ESGF/esgf-missing_march3rd.json', 'r') as f:
+    with open('../Data_availability/ESGF/esgf-missing_march22nd.json', 'r') as f:
         missing_dict = json.load(f)
     if exp in missing_dict:
         if model in missing_dict[exp]:

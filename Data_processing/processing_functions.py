@@ -20,7 +20,7 @@ def find_members(model, exp, datatype = 'anomalies'):
     if datatype == 'anomalies':
         directory = '../Processed_data/Global_annual_anomalies/'
     elif datatype == 'means':
-        directory = '../Processed_data/Global_annual_means_csv/'
+        directory = '../Processed_data/Global_annual_means/'
     elif datatype == 'forcing':
         directory = '../Estimates/Transient_forcing_estimates/'
     modelexpdirectory = os.path.join(directory, model, exp)
@@ -32,7 +32,7 @@ def find_members(model, exp, datatype = 'anomalies'):
     members.sort()
     return members
 
-def make_exp_dict(directory = '../Processed_data/Global_annual_means_csv/'):
+def make_exp_dict(directory = '../Processed_data/Global_annual_means/'):
     experiments = {}
     model_names = [ f.name for f in os.scandir(directory) if f.is_dir() and f.name !='.ipynb_checkpoints']
     model_names.sort()
@@ -191,7 +191,7 @@ def load_anom(model, exp, member, length_restriction = None):
     #filename = model + '_' + exp + '_' + member + '_anomalies.txt'
     #file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
     filename = model + '_' + exp + '_' + member + '_anomalies.csv'
-    file = os.path.join('../Processed_data/Global_annual_anomalies_csv/', model, exp, filename)
+    file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
     
     data = pd.read_table(file, index_col=0, sep = ',')
     if model != 'AWI-CM-1-1-MR':
@@ -199,7 +199,7 @@ def load_anom(model, exp, member, length_restriction = None):
     if length_restriction != None:
         data = data[:length_restriction]
     return data
-    
+  
 def branch_info_corrections(branch_info_table):
     
     # remove spaces in parent exp names for some models (e.g. CNRM-CM6-1-HR):
@@ -235,11 +235,31 @@ def branch_info_corrections(branch_info_table):
                 else:
                     print('Please tell this function how to select a parent member from', '\n', \
                     'the other alternative parent members available:', parent_exp, parent_exp_df['member'].values)
-                    if model == 'EC-Earth3' and exp == 'historical':
-                        r_value = int(member.split("r")[1].split("i")[0])
-                        if r_value >= 100: # then we have a member of SMHI-LENS
-                            # these historical runs start in year 1970, and have no branch info in file metadata
-                            
+                    if model == 'EC-Earth3':
+                        if exp == 'historical':
+                            r_value = int(member.split("r")[1].split("i")[0])
+                            if r_value >= 100: # then we have a member of SMHI-LENS
+                                # these historical runs start in year 1970, and have no branch info in file metadata.
+                                # The paper https://doi.org/10.5194/gmd-14-4781-2021 describes the branching though.
+                                # It has actually branched from the model EC-Earth3-Veg!
+                                # Section 2.2 says it branches from historical members r1-3 and r7-9 (but r7-9 do not exist in esgf)
+                                # However, Table 1 says members r1-6 (and these exist), so I assume these are the correct data
+                                lens_branch_dict = {}
+                                realization_ids = np.arange(1,6+1)
+                                for realization_id in realization_ids:
+                                    firstmember = 100 + realization_id
+                                    member_list = [firstmember+6*i for i in range(0,9) if firstmember+6*i<151]
+                                    lens_branch_dict[realization_id] = member_list  
+                                for key in lens_branch_dict.keys():
+                                    if r_value in lens_branch_dict[key]:
+                                        alt_parent_member = 'r'+str(key)+'i1p1f1'
+                                        print('EC-Earth3 historical', member, 'branches from EC-Earth3-Veg historical realization', 'r'+str(key)+'i1p1f1')
+                        else:
+                            if parent_member == 'r3i1p1f1':
+                                alt_parent_member = None
+                                print('rlut files for parent member contains error')
+                            #elif exp == 'ssp245' and member == 'r7i1p1f2':
+                            #    alt_parent_member = 'r7i1p1f1'
                     elif model == 'IPSL-CM6A-LR' and parent_exp == 'piControl':
                         alt_parent_member = 'r1i1p1f1'
                     elif model in ['GISS-E2-1-G']:
@@ -261,8 +281,10 @@ def branch_info_corrections(branch_info_table):
                     elif model in ['UKESM1-0-LL']:
                         if exp in ssp_exp and parent_member in ['r5i1p1f2', 'r6i1p1f2', 'r7i1p1f2']:
                             alt_parent_member = parent_member.replace('f2', 'f3') # probably, since this is what exists in esgf. 
+                    
                     print('Member', alt_parent_member, 'has been manually selected')
                     branch_info_table.at[ind, 'parent_variant_id'] = alt_parent_member
+                    
             if exp in ssp_exp:
                 # ssp member should likely be the same as historical member
                 if member != parent_member:
@@ -270,6 +292,10 @@ def branch_info_corrections(branch_info_table):
                         branch_info_table.at[ind, 'parent_variant_id'] = member
                         print('Metadata said parent of', exp, member, 'should be', parent_exp, parent_member)
                         print('This parent member is changed for to match the child member')
+            if model == 'EC-Earth3' and member[-2:] == 'f2':
+                print(exp, member, 'Variant_id of parent experiment looks so randomly selected that I do not believe it could be correct')
+                print('Parent member is set to None')
+                branch_info_table.at[ind, 'parent_variant_id'] = None
                         
     return branch_info_table # with corrections  
 
@@ -283,7 +309,7 @@ def dpy(start_year, end_year, ds_calendar): # days per year
     return leap_dpy
 
 def find_model_calendars(model):
-    calendar_file = '../Processed_data/Calendars_csv/' + model + '_calendars.csv'
+    calendar_file = '../Processed_data/Calendars/' + model + '_calendars.csv'
     #calendar_file = '../Processed_data/Calendars/' + model + '_calendars.txt'
 
     #model_calendars = pd.read_table(calendar_file,index_col=0, sep = ' ')
@@ -323,7 +349,7 @@ def plot_anomalies(anomalies, var_list = ['tas', 'rlut', 'rsut', 'rsdt']):
         
 def save_anomalies(anomalies, model, exp, member):
     filename = model + '_' + exp + '_' + member + '_anomalies.csv'
-    filepath = os.path.join('../Processed_data/Global_annual_anomalies_csv/', model, exp)
+    filepath = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp)
     if os.path.isdir(filepath) == False:
         os.makedirs(filepath)
     anomalies.to_csv(filepath + '/' + filename)
@@ -380,7 +406,16 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
         if exp in ['abrupt-0p5xCO2', 'abrupt-2xCO2']:
             years_since_piControl_start = 0
     elif model in ['EC-Earth3']:
-        pass
+        # my best guess of what they have done wrong, but I am not 100% sure about this:
+        if branch_time_days == 0:
+            years_since_piControl_start = 0
+        # branch times looks correct for most experiments, except:
+        #'historical': ['r25i1p1f1']. The same time as for member r23i1p1f1 is listed, which is probably a mistake
+        if exp in hist_exp or exp in ssp_exp:
+            if member == 'r25i1p1f1':
+                years_since_piControl_start = 2720  - piControl_start_year
+                # deduced by following the pattern of the previous members, with 40 year separation of each branch
+                # this looks correct when looking at the time series too.
     elif model in ['FGOALS-f3-L']:
         if exp in idealised_exp or exp in hist_exp or exp in ssp_exp:
             piControl_branchyear = 600 + (int(member[1])-1)*50
@@ -408,6 +443,7 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
     elif model in ['IITM-ESM']:
         # Time unit seems to be wrong
         years_since_piControl_start = 0 
+    # MIROC-ES2L historical r26 - r30 has branch times long after the end of piControl. Probably wrong.
     elif model in ['NorCPM1']:
         years_since_piControl_start = 0 
         # For all experiments, see Figure 1 in 
@@ -444,7 +480,7 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
         # we should include the other time period of piControl before computing anomalies
         #print('years_since_piControl_start', years_since_piControl_start)
     # KACE-1-0-G historical all members: Probably branch around year 150 in piControl instead of year 0
-
+    
     
     if initial_years_since_piControl_start != years_since_piControl_start:
         print('years_since_piControl_start has been corrected to', years_since_piControl_start)

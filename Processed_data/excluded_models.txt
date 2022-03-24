@@ -1,0 +1,31 @@
+# Excluded models, and reasons why:
+KACE-1-0-G: branch info is wrong, and I can't tell what it should be. The piControl has a strong drift, so it is especially important to get it correct for this model. By studying the historical global annual means, I can see that it probably branches around year 150. 
+
+FIO-ESM2-0: Because it is missing time periods in piControl, which is needed to make anomalies for important experiments.
+Also, abrupt-4xCO2 r2 has some abrupt changes, which may be errors?
+
+CIESM: branch info is likely wrong, but correct info can be found in their publications (1pctCO2, abrupt-4xCO2, historical r1 branch at the same time, jan 1st, year 1. historical r2 branch in year 100, and r3 in year 200.) However, there are sometimes abrupt changes in the rsut, rlut variables, but these almost cancel each other. My resulting estimates for this model are also outliers, so I don't know if we trust these data enough to include them.
+
+CAS-ESM2-0: I am not sure about the branch times of this model, since parent time units are not correct. I could not find a publication with description of branch times. It does not drift very much, so eventual errors in the branch time won't make a big difference for the anomalies.
+ 
+
+# Models where only some members should be excluded:
+CNRM-CM6-1: several members of historical branch after the end of piControl,
+piControl is probably run longer than the period 1850-2349 that is available for download
+Maybe exclude members branching after 2349:
+r11 - r20 and r26 - r30
+
+MIROC-ES2L historical r26 - r30 has branch times long after the end of piControl. Probably wrong.
+
+
+
+# Consider keeping:
+
+CanESM5 historical: some members branch after the end of the available piControl period
+should not cause much error that we don't know these unavailable piControl values
+
+CMCC-CM2-SR5: (after looking at more members from this model, I am more convinced that it may be correct, so it should not be excluded..)
+branch info for some members of historical is possibly wrong, since the initial values are a bit off compared to piControl. I can't figure out what the correct info should be.
+
+KIOST-ESM: 4xCO2, historical, 1pctCO2 likely branch in year 3181, 8 years before the newest version of the piControl starts. An older version of piControl contains the necessary years, but I don't know if this should be used? (These data are currently not in google cloud, because their algorithm seems to exclude older versions of datasets)
+These 8 missing years will only cause very minor errors in the estimated anomalies, so we should consider keeping it.
