@@ -1,0 +1,1 @@
+	tau1	tau2	tau3	tau4	a_1	a_2	a_3	a_4	b_1	b_2	b_3	b_4	F2x	T2x	rnorm
