@@ -1,0 +1,12 @@
+ model exp member calendar
+0 GFDL-CM4 piClim-control r1i1p1f1 noleap
+1 GFDL-CM4 ssp585 r1i1p1f1 noleap
+2 GFDL-CM4 piControl r1i1p1f1 noleap
+3 GFDL-CM4 abrupt-4xCO2 r1i1p1f1 noleap
+4 GFDL-CM4 ssp245 r1i1p1f1 noleap
+5 GFDL-CM4 historical r1i1p1f1 noleap
+6 GFDL-CM4 piClim-4xCO2 r1i1p1f1 noleap
+7 GFDL-CM4 1pctCO2 r1i1p1f1 noleap
+8 GFDL-CM4 piClim-histall r1i1p1f1 noleap
+9 GFDL-CM4 piClim-histall r2i1p1f1 noleap
+10 GFDL-CM4 piClim-histall r3i1p1f1 noleap

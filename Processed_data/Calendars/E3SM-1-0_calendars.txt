@@ -1,8 +1,0 @@
- model exp member calendar
-0 E3SM-1-0 piControl r1i1p1f1 noleap
-1 E3SM-1-0 abrupt-4xCO2 r1i1p1f1 noleap
-2 E3SM-1-0 historical r1i1p1f1 noleap
-3 E3SM-1-0 historical r2i1p1f1 noleap
-4 E3SM-1-0 historical r3i1p1f1 noleap
-5 E3SM-1-0 historical r4i1p1f1 noleap
-6 E3SM-1-0 historical r5i1p1f1 noleap

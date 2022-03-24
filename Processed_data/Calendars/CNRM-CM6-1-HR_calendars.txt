@@ -1,8 +1,0 @@
- model exp member calendar
-0 CNRM-CM6-1-HR ssp585 r1i1p1f2 gregorian
-1 CNRM-CM6-1-HR piControl r1i1p1f2 gregorian
-2 CNRM-CM6-1-HR abrupt-4xCO2 r1i1p1f2 gregorian
-3 CNRM-CM6-1-HR ssp245 r1i1p1f2 gregorian
-4 CNRM-CM6-1-HR historical r1i1p1f2 gregorian
-5 CNRM-CM6-1-HR ssp370 r1i1p1f2 gregorian
-6 CNRM-CM6-1-HR ssp126 r1i1p1f2 gregorian
