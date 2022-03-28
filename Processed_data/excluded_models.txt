@@ -8,6 +8,7 @@ CIESM: branch info is likely wrong, but correct info can be found in their publi
 
 CAS-ESM2-0: I am not sure about the branch times of this model, since parent time units are not correct. I could not find a publication with description of branch times. It does not drift very much, so eventual errors in the branch time won't make a big difference for the anomalies.
  
+MIROC-ES2H: because it is only run for 1 year
 
 # Models where only some members should be excluded:
 CNRM-CM6-1: several members of historical branch after the end of piControl,
@@ -27,5 +28,6 @@ should not cause much error that we don't know these unavailable piControl value
 CMCC-CM2-SR5: (after looking at more members from this model, I am more convinced that it may be correct, so it should not be excluded..)
 branch info for some members of historical is possibly wrong, since the initial values are a bit off compared to piControl. I can't figure out what the correct info should be.
 
-KIOST-ESM: 4xCO2, historical, 1pctCO2 likely branch in year 3181, 8 years before the newest version of the piControl starts. An older version of piControl contains the necessary years, but I don't know if this should be used? (These data are currently not in google cloud, because their algorithm seems to exclude older versions of datasets)
-These 8 missing years will only cause very minor errors in the estimated anomalies, so we should consider keeping it.
+KIOST-ESM: Looks like the branch time is updated recently. Now I find that 4xCO2 and historical branches in year 3188, 1 year before piControl starts, and 1pctCO2 branches 8 years before piControl starts. These missing years will only cause very minor errors in the estimated anomalies, so we should consider keeping it.
+Previously I found that 4xCO2, historical, 1pctCO2 likely branch in year 3181, 8 years before the newest version of the piControl starts. An older version of piControl contains the necessary years, but I don't know if this should be used? (These data are currently not in google cloud, because their algorithm seems to exclude older versions of datasets)
+
