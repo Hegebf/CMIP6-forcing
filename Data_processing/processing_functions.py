@@ -186,21 +186,27 @@ def data_to_load(model, experiments, previously_read):
 
     return modelexp_toload 
 
+def find_ECEarth3lens_parent(member):
+    # only for members r101 - r150 (the LENS)
+    # these historical runs start in year 1970, and have no branch info in file metadata.
+    # The paper https://doi.org/10.5194/gmd-14-4781-2021 describes the branching though.
+    # It has actually branched from the model EC-Earth3-Veg!
+    # Section 2.2 says it branches from historical members r1-3 and r7-9 (but r7-9 do not exist in esgf)
+    # However, Table 1 says members r1-6 (and these exist), so I assume these are the correct data
+    r_value = int(member.split("r")[1].split("i")[0])
+    lens_branch_dict = {}
+    realization_ids = np.arange(1,6+1)
+    for realization_id in realization_ids:
+        firstmember = 100 + realization_id
+        member_list = [firstmember+6*i for i in range(0,9) if firstmember+6*i<151]
+        lens_branch_dict[realization_id] = member_list  
+    for key in lens_branch_dict.keys():
+        if r_value in lens_branch_dict[key]:
+            parent_member = 'r'+str(key)+'i1p1f1'
+            print('EC-Earth3 historical', member, 'branches from EC-Earth3-Veg historical realization', 'r'+str(key)+'i1p1f1')
+    return parent_member
 
-def load_anom(model, exp, member, length_restriction = None):
-    #filename = model + '_' + exp + '_' + member + '_anomalies.txt'
-    #file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
-    filename = model + '_' + exp + '_' + member + '_anomalies.csv'
-    file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
-    
-    data = pd.read_table(file, index_col=0, sep = ',')
-    if model != 'AWI-CM-1-1-MR':
-        data = data.dropna().reset_index()
-    if length_restriction != None:
-        data = data[:length_restriction]
-    return data
-  
-def branch_info_corrections(branch_info_table):
+def branch_info_corrections(branch_info_table, printing = True):
     
     # remove spaces in parent exp names for some models (e.g. CNRM-CM6-1-HR):
     parent_exps = branch_info_table['parent_experiment_id']
@@ -227,37 +233,28 @@ def branch_info_corrections(branch_info_table):
             parent_exp_df = branch_info_table.loc[branch_info_table['exp'] == parent_exp]
             parent_member_df = parent_exp_df.loc[parent_exp_df['member'] == parent_member]
             if parent_member_df.empty and exp != 'piControl':
-                print('\n', 'Parent', parent_exp, parent_member, 'does not exist for:', exp, member)
+                if printing == True:
+                    print('\n', 'Parent', parent_exp, parent_member, 'does not exist for:', exp, member)
                 if len(parent_exp_df) == 1:
                     alt_parent_member = parent_exp_df['member'].values[0]
                     branch_info_table.at[ind, 'parent_variant_id'] = alt_parent_member
-                    print(' - parent member info changed to the only other option available:', alt_parent_member)
+                    if printing == True:
+                        print(' - parent member info changed to the only other option available:', alt_parent_member)
                 else:
-                    print('Please tell this function how to select a parent member from', '\n', \
+                    if printing == True:
+                        print('Please tell this function how to select a parent member from', '\n', \
                     'the other alternative parent members available:', parent_exp, parent_exp_df['member'].values)
                     if model == 'EC-Earth3':
                         if exp == 'historical':
                             r_value = int(member.split("r")[1].split("i")[0])
                             if r_value >= 100: # then we have a member of SMHI-LENS
-                                # these historical runs start in year 1970, and have no branch info in file metadata.
-                                # The paper https://doi.org/10.5194/gmd-14-4781-2021 describes the branching though.
-                                # It has actually branched from the model EC-Earth3-Veg!
-                                # Section 2.2 says it branches from historical members r1-3 and r7-9 (but r7-9 do not exist in esgf)
-                                # However, Table 1 says members r1-6 (and these exist), so I assume these are the correct data
-                                lens_branch_dict = {}
-                                realization_ids = np.arange(1,6+1)
-                                for realization_id in realization_ids:
-                                    firstmember = 100 + realization_id
-                                    member_list = [firstmember+6*i for i in range(0,9) if firstmember+6*i<151]
-                                    lens_branch_dict[realization_id] = member_list  
-                                for key in lens_branch_dict.keys():
-                                    if r_value in lens_branch_dict[key]:
-                                        alt_parent_member = 'r'+str(key)+'i1p1f1'
-                                        print('EC-Earth3 historical', member, 'branches from EC-Earth3-Veg historical realization', 'r'+str(key)+'i1p1f1')
+                                
+                                alt_parent_member = find_ECEarth3lens_parent(member)
                         else:
                             if parent_member == 'r3i1p1f1':
                                 alt_parent_member = None
-                                print('rlut files for parent member contains error')
+                                if printing == True:
+                                    print('rlut files for parent member contains error')
                             #elif exp == 'ssp245' and member == 'r7i1p1f2':
                             #    alt_parent_member = 'r7i1p1f1'
                     elif model == 'IPSL-CM6A-LR' and parent_exp == 'piControl':
@@ -265,7 +262,8 @@ def branch_info_corrections(branch_info_table):
                     elif model in ['GISS-E2-1-G']:
                         if exp[:6] == 'piClim' and parent_member == 'r1i1p3f2':
                             alt_parent_member = 'r1i1p1f2'
-                            print('this will not be used for computing anomalies anyway')  
+                            if printing == True:
+                                print('this will not be used for computing anomalies anyway')  
                         elif exp in ssp_exp and 'p5' in parent_member:
                             alt_parent_member = parent_member.replace('p5', 'p1') # probably.
                     elif model in ['GISS-E2-1-H']:
@@ -277,12 +275,13 @@ def branch_info_corrections(branch_info_table):
                     elif model in ['MRI-ESM2-0']:
                         if exp in ssp_exp and 'i3' in parent_member:
                             alt_parent_member = parent_member.replace('i3', 'i1') # probably. 
-                            print('parent_member')
+                            #print('parent_member')
                     elif model in ['UKESM1-0-LL']:
                         if exp in ssp_exp and parent_member in ['r5i1p1f2', 'r6i1p1f2', 'r7i1p1f2']:
                             alt_parent_member = parent_member.replace('f2', 'f3') # probably, since this is what exists in esgf. 
                     
-                    print('Member', alt_parent_member, 'has been manually selected')
+                    if printing == True:    
+                        print('Member', alt_parent_member, 'has been manually selected')
                     branch_info_table.at[ind, 'parent_variant_id'] = alt_parent_member
                     
             if exp in ssp_exp:
@@ -290,11 +289,13 @@ def branch_info_corrections(branch_info_table):
                 if member != parent_member:
                     if member in parent_exp_df['member'].values:
                         branch_info_table.at[ind, 'parent_variant_id'] = member
-                        print('Metadata said parent of', exp, member, 'should be', parent_exp, parent_member)
-                        print('This parent member is changed for to match the child member')
+                        if printing == True:
+                            print('Metadata said parent of', exp, member, 'should be', parent_exp, parent_member)
+                            print('This parent member is changed for to match the child member')
             if model == 'EC-Earth3' and member[-2:] == 'f2':
-                print(exp, member, 'Variant_id of parent experiment looks so randomly selected that I do not believe it could be correct')
-                print('Parent member is set to None')
+                if printing == True:
+                    print(exp, member, 'Variant_id of parent experiment looks so randomly selected that I do not believe it could be correct')
+                    print('Parent member is set to None')
                 branch_info_table.at[ind, 'parent_variant_id'] = None
                         
     return branch_info_table # with corrections  
