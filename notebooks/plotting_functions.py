@@ -8,13 +8,14 @@ import pandas as pd
 import os
 from estimation import *
 
+
 def plot_allvar(model, exp, members):
     fig, ax = plt.subplots(nrows = 2, ncols = 2, figsize = [18,10]); axes = np.reshape(ax, 4)
     fig.suptitle(model + ' variables', fontsize = 16)
     for member in members:
-        filename = model + '_' + exp + '_' + member + '_anomalies.txt'
+        filename = model + '_' + exp + '_' + member + '_anomalies.csv'
         file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
-        data = pd.read_table(file, index_col=0, sep = ',')
+        data = pd.read_csv(file, index_col=0)
         data = data.dropna().reset_index()
         x = data.index.values
 
@@ -168,8 +169,8 @@ def plot_Nfit(ax, timescales, b_n, include_components = False, color = 'lightblu
 
 def fixedSSTestimate4xCO2(model, members, plotting_axis = None):
     # check if there exists a fixed-SST estimate of the forcing
-    fixedSSTforcingfile = '../Estimates/fixed_SST_forcing_estimates.txt'
-    fSSTf_df = pd.read_table(fixedSSTforcingfile, index_col=0, sep = '\t')
+    fixedSSTforcingfile = '../Estimates/fixed_SST_forcing_estimates.csv'
+    fSSTf_df = pd.read_csv(fixedSSTforcingfile, index_col=0)
     nmembers = len(fSSTf_df.index[fSSTf_df.index == model])
 
     if nmembers>0:

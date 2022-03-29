@@ -7,7 +7,8 @@ import matplotlib.transforms as transforms
 import pandas as pd
 import os
 from scipy import optimize
-from plotting_functions import *
+# causes problems with circular referencing:
+#from plotting_functions import *
 
 
 def random_tau(dim=3): # return "dim" randomly chosen time scales
@@ -38,9 +39,9 @@ def load_anom(model, exp, member, length_restriction = None):
     filename = model + '_' + exp + '_' + member + '_anomalies.csv'
     file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
     
-    data = pd.read_table(file, index_col=0, sep = ',')
+    data = pd.read_csv(file, index_col=0)
     if model != 'AWI-CM-1-1-MR':
-        data = data.dropna().reset_index()
+        data = data.dropna() #.reset_index()
     if length_restriction != None:
         data = data[:length_restriction]
     return data
@@ -136,20 +137,20 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
         years = np.arange(1, stopyear + 1); years0 = np.arange(0, stopyear + 1)
         tas_dict = {}; toarad_dict = {}
         for (mb, member) in enumerate(members):
-            data = f.load_anom(model, exp, member, length_restriction = stopyear)
+            data = load_anom(model, exp, member, length_restriction = stopyear)
             tas = data['tas']; #deltaT0 = np.concatenate([[0], tas])
             toarad = data['rsdt'] - data['rsut'] - data['rlut']
             tas_dict[member] = tas; toarad_dict[member] = toarad
 
-        meanT0 = f.mean_4xCO2tas(model, members, length_restriction = stopyear)
+        meanT0 = mean_4xCO2tas(model, members, length_restriction = stopyear)
 
         dim = 3 # the number of time scales
         if any(np.isnan(fixed_timescales)):
-            taulist = f.random_tau(dim)
+            taulist = random_tau(dim)
         else:
             taulist = fixed_timescales
         # compute predictors (1 - np.exp((-t/tau[i])) of the linear model
-        tas_pred = f.tas_predictors(t = years0, fixed_par = taulist);
+        tas_pred = tas_predictors(t = years0, fixed_par = taulist);
         # find parameters a_n in: deltaT = \sum_i a_n[i]*(1 - np.exp((-t/tau[i]))
         a_n, rnorm1 = optimize.nnls(tas_pred,meanT0) # non-negative least squares, to ensure positive parameters
         Ti = np.array([tas_pred[:,i]*a_n[i] for i in range(0,dim)]) # compute components
@@ -165,7 +166,7 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
             T_region3 = tas[tas>=splits[-2]]; N_region3 = toarad[tas>splits[-2]]
             #T_region3_all = np.append(T_region3_all, T_region3)
             #N_region3_all = np.append(N_region3_all, N_region3)
-            reg_endindex3 = f.endindex(len(tas), len(T_region3), taulist[2])
+            reg_endindex3 = endindex(len(tas), len(T_region3), taulist[2])
             T_region3_reg = np.append(T_region3_reg, T_region3[:reg_endindex3])
             N_region3_reg = np.append(N_region3_reg, N_region3[:reg_endindex3])    
         if len(T_region3_reg) < 10:
@@ -179,8 +180,8 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
 
         # need to include the "invisible" even longer time scale for this to work:
         tau4 = 5000;
-        T4 = a_4*f.tas_predictors(t = years0, fixed_par = [tau4])[:,0]
-        #N4 = b_4*f.toarad_predictors(t = years0, fixed_par = tau4)
+        T4 = a_4*tas_predictors(t = years0, fixed_par = [tau4])[:,0]
+        #N4 = b_4*toarad_predictors(t = years0, fixed_par = tau4)
         rnorm2 = np.linalg.norm(Tsum + T4 - meanT0)
         # but check that this component is approximately 0 over the first 150 years
 
@@ -194,7 +195,7 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
             N_region2 = N1and2[T1and2>=splits[0]]
             T_region2_all = np.append(T_region2_all, T_region2)
             N_region2_all = np.append(N_region2_all, N_region2)
-            reg_endindex2 = f.endindex(len(tas), len(T_region2), taulist[1])
+            reg_endindex2 = endindex(len(tas), len(T_region2), taulist[1])
             if reg_endindex2 <= 2: # if region of regression is 0-2 points
                 reg_endindex2 = 3 # make sure we use at least 3 points if available
             T_region2_reg = np.append(T_region2_reg, T_region2[:reg_endindex2])
@@ -215,7 +216,7 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
             T_region1 = T1; N_region1 = N1
             T_region1_all = np.append(T_region1_all, T_region1)
             N_region1_all = np.append(N_region1_all, N_region1)
-            reg_endindex1 = f.endindex(len(tas), len(T_region1), taulist[0])
+            reg_endindex1 = endindex(len(tas), len(T_region1), taulist[0])
             T_region1_reg = np.append(T_region1_reg, T_region1[:reg_endindex1])
             N_region1_reg = np.append(N_region1_reg, N_region1[:reg_endindex1])
         T_region1_reg_mirrored = splits[0] - T_region1_reg
@@ -232,7 +233,7 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
 
         if plotting_axis != None:
             ax = plotting_axis
-            #fig = f.Gregory_plot()
+            #fig = Gregory_plot()
             trans = transforms.blended_transform_factory(ax.transData, ax.transAxes)
             # x-coordinate: data coordinates, y-coordinate on axis coordinates (0,1)
             texts = ['$a_1$', '$a_1 + a_2$', '$a_1 + a_2 + a_3$']
@@ -241,7 +242,7 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
                 ax.text(splitline-0.1, 0.95, texts[l], fontsize = 14,\
                         horizontalalignment='right', transform = trans)
             for member in members:
-                data = f.load_anom(model,exp, member, length_restriction = 150)
+                data = load_anom(model,exp, member, length_restriction = 150)
                 tas = data['tas']; 
                 toarad = data['rsdt'] - data['rsut'] - data['rlut']
                 ax.scatter(tas, toarad, color = 'black')
@@ -262,7 +263,7 @@ def Gregory_linreg(model, exp, members, startyear = 1, stopyear = 150):
     alltas = []; alltoarad = []
     # use datapoints from all specified members in the regression
     for (mb, member) in enumerate(members):
-        data = f.load_anom(model, exp, member, length_restriction = stopyear)
+        data = load_anom(model, exp, member, length_restriction = stopyear)
         data = data[(startyear-1):]
         tas = data['tas']
         toarad = data['rsdt'] - data['rsut'] - data['rlut']
@@ -274,8 +275,8 @@ def Gregory_linreg(model, exp, members, startyear = 1, stopyear = 150):
     linfit = np.polyval(regpar, [0, gT2x*2])
     return gF2x, gT2x, linfit
 
-def forcing_F13(tasdata, Ndata, model, inputparfile = 'best_estimated_parameters_allmembers.txt'):
-    parameter_table = pd.read_table('../Estimates/' + inputparfile,index_col=0)
+def forcing_F13(tasdata, Ndata, model, inputparfile = 'best_estimated_parameters_allmembers.csv'):
+    parameter_table = pd.read_csv('../Estimates/' + inputparfile,index_col=0)
     GregoryT2x = parameter_table.loc[model,'GregoryT2x']
     GregoryF2x = parameter_table.loc[model,'GregoryF2x']
     fbpar = GregoryF2x/GregoryT2x
@@ -290,9 +291,10 @@ def etminan_co2forcing(C, C0 = 284.3169998547858, N_bar = 273.021049007482):
 
 def expfit_detrend(x):
     dim = 3
-    taulist = f.random_tau(dim)
-    tas_pred = f.tas_predictors(t = np.arange(0,150), fixed_par = taulist)
+    taulist = random_tau(dim)
+    tas_pred = tas_predictors(t = np.arange(0,150), fixed_par = taulist)
     a_n, rnorm1 = optimize.nnls(tas_pred, np.abs(x))
     Ti = np.array([tas_pred[:,i]*a_n[i] for i in range(0,dim)]) # compute components
     Tsum = tas_pred@a_n # sum of all components
     return (np.abs(x) - Tsum)*np.sign(x[-1])
+
