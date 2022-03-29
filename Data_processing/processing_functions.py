@@ -428,8 +428,22 @@ def branch_time_correction(model, exp, member, branch_time_days, piControl_timeu
             #r3: should start in piControl year 700
             years_since_piControl_start = piControl_branchyear - piControl_start_year
     elif model in ['FGOALS-g3']:
-        if exp in hist_exp:
-            years_since_piControl_start = 170
+        #if exp in hist_exp:
+            # From https://doi.org/10.1029/2019MS002012:
+            # Since info looks wrong for at least for 1pctCO2 as well (after visual inspection of anomalies), I try this for all experiments
+        if member == 'r1i1p1f1':
+            years_since_piControl_start = 370 - piControl_start_year
+        elif member == 'r2i1p1f1':
+            years_since_piControl_start = 350 - piControl_start_year
+        elif member == 'r3i1p1f1':
+            years_since_piControl_start = 330 - piControl_start_year
+        elif member == 'r4i1p1f1':
+            years_since_piControl_start = 540 - piControl_start_year
+        elif member == 'r5i1p1f1':
+            years_since_piControl_start = 465 - piControl_start_year
+        elif member == 'r6i1p1f1':
+            years_since_piControl_start = 700 - piControl_start_year
+            #years_since_piControl_start = 170
             # hist-aer, hist-GHG, hist-nat should branch at the same time as historical
     elif model in ['FIO-ESM-2-0']:
         if exp in hist_exp or exp in ssp_exp:

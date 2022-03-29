@@ -10,6 +10,7 @@ CAS-ESM2-0: I am not sure about the branch times of this model, since parent tim
  
 MIROC-ES2H: because it is only run for 1 year
 
+
 # Models where only some members should be excluded:
 CNRM-CM6-1: several members of historical branch after the end of piControl,
 piControl is probably run longer than the period 1850-2349 that is available for download
@@ -18,6 +19,12 @@ r11 - r20 and r26 - r30
 
 MIROC-ES2L historical r26 - r30 has branch times long after the end of piControl. Probably wrong.
 
+GISS-E2-1-G piClim member r1i1p3f2. Something is wrong about the rlut values
+
+# Models that I think may have branch time errors, just based on a visual inspection of resulting forcing estimates:
+
+'NESM3', 'FGOALS-g3', 'KIOST-ESM', 'CMCC-CM2-SR5'
+I have not decided what to do about these yet. 
 
 
 # Consider keeping:
