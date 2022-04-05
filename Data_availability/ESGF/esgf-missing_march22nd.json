@@ -6,6 +6,9 @@
         "GFDL-ESM4": {
             "r2i1p1f1": "only tas exist",
             "r3i1p1f1": "only tas exist"
+        },
+        "GISS-E2-1-G": {
+            "r7i1p3f1": "files for years 1950-1999 are missing"
         }
     },
 "ssp245":
