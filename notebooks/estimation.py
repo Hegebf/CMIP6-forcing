@@ -40,13 +40,14 @@ def load_anom(model, exp, member, length_restriction = None):
     file = os.path.join('../Processed_data/Global_annual_anomalies/', model, exp, filename)
     
     data = pd.read_csv(file, index_col=0)
-    if model != 'AWI-CM-1-1-MR':
+    if model != 'AWI-CM-1-1-MR': # maybe not neccessary after updating the data archive?
         data = data.dropna() #.reset_index()
     if length_restriction != None:
         data = data[:length_restriction]
     return data
 
-def mean_4xCO2tas(model, members, length_restriction = None, exp = 'abrupt-4xCO2'):
+# this function has a new name that needs to be updated in scripts:
+def member_mean_tas(model, members, length_restriction = None, exp = 'abrupt-4xCO2'):
     # add also 0 response at time 0
     for (mb, member) in enumerate(members):
         data = load_anom(model, exp, member, length_restriction = length_restriction)
@@ -138,12 +139,19 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
         tas_dict = {}; toarad_dict = {}
         for (mb, member) in enumerate(members):
             data = load_anom(model, exp, member, length_restriction = stopyear)
+            #if model != 'AWI-CM-1-1-MR':
+            #    # maybe not neccessary to dropna after updating the data archive?
+            #    data = data.dropna().reset_index()
+            #display(data)
             tas = data['tas']; #deltaT0 = np.concatenate([[0], tas])
             toarad = data['rsdt'] - data['rsut'] - data['rlut']
+            if exp == 'abrupt-0p5xCO2':
+                tas = -tas; toarad = -toarad # change signs before estimation
             tas_dict[member] = tas; toarad_dict[member] = toarad
 
-        meanT0 = mean_4xCO2tas(model, members, length_restriction = stopyear)
-
+        meanT0 = member_mean_tas(model, members, length_restriction = stopyear, exp = exp)
+        if exp == 'abrupt-0p5xCO2':
+            meanT0 = -meanT0
         dim = 3 # the number of time scales
         if any(np.isnan(fixed_timescales)):
             taulist = random_tau(dim)
@@ -168,7 +176,8 @@ def fbpar_estimation(model, exp, members, plotting_axis = None, stopyear = 150, 
             #N_region3_all = np.append(N_region3_all, N_region3)
             reg_endindex3 = endindex(len(tas), len(T_region3), taulist[2])
             T_region3_reg = np.append(T_region3_reg, T_region3[:reg_endindex3])
-            N_region3_reg = np.append(N_region3_reg, N_region3[:reg_endindex3])    
+            N_region3_reg = np.append(N_region3_reg, N_region3[:reg_endindex3]) 
+        
         if len(T_region3_reg) < 10:
             raise Exception('Too few points for regression')
         reg3par = np.polyfit(T_region3_reg, N_region3_reg, deg = 1)
@@ -267,12 +276,18 @@ def Gregory_linreg(model, exp, members, startyear = 1, stopyear = 150):
         data = data[(startyear-1):]
         tas = data['tas']
         toarad = data['rsdt'] - data['rsut'] - data['rlut']
+        if exp == 'abrupt-0p5xCO2': # change sign of data
+            tas = -tas; toarad = -toarad
         alltas = np.append(alltas, tas)
         alltoarad = np.append(alltoarad,toarad)
         
     regpar = np.polyfit(alltas, alltoarad, 1)
-    gF2x = regpar[1]/2; gT2x = -regpar[1]/(2*regpar[0])
-    linfit = np.polyval(regpar, [0, gT2x*2])
+    if exp == 'abrupt-4xCO2':
+        gF2x = regpar[1]/2; gT2x = -regpar[1]/(2*regpar[0])
+        linfit = np.polyval(regpar, [0, gT2x*2])
+    else:
+        gF2x = regpar[1]; gT2x = -regpar[1]/(regpar[0])
+        linfit = np.polyval(regpar, [0, gT2x])
     return gF2x, gT2x, linfit
 
 def forcing_F13(tasdata, Ndata, model, inputparfile = 'best_estimated_parameters_allmembers.csv'):
@@ -298,3 +313,22 @@ def expfit_detrend(x):
     Tsum = tas_pred@a_n # sum of all components
     return (np.abs(x) - Tsum)*np.sign(x[-1])
 
+def recT_from4xCO2(T4xCO2, F4xCO2, forcing_rec_exp):
+    # Use what we know about 4xCO2 forcing and temperature response T4xCO2
+    # to reconstruct the temperature response to the forcing "forcing_rec_exp"
+    # index 0 should correspond to year 0, where T4xCO2[0]=0,
+    # and we set the forcing difference in year 0 to 0
+    lf = len(forcing_rec_exp)
+    delta_f_vector = np.concatenate(([0], np.diff(forcing_rec_exp)))
+    
+    if lf > len(T4xCO2):
+        print('Cannot compute reconstruction for an experiment longer than the 4xCO2 experiment')
+    else:
+        W = np.full((lf,lf),0.) # will become a lower triangular matrix
+        for i in range(0,lf):
+            for j in range(0,i):
+                W[i,j] = delta_f_vector[i-j]/F4xCO2
+        #print(W)
+        T_rec_exp = W@(T4xCO2[:lf])
+        return T_rec_exp
+        #return W

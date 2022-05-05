@@ -103,34 +103,47 @@ def plot_Tvstime(ax, model, exp, members, stopyear = 150, include_mean = True, z
     # just for plotting on the axis "ax", which is defined somewhere else
     
     var = 'tas'; years0 = np.arange(0, stopyear + 1)
+    if exp == 'abrupt-0p5xCO2':
+        sign = -1
+    else: 
+        sign = 1
     for (mb, member) in enumerate(members):
         data = load_anom(model, exp, member, length_restriction = stopyear)
         deltaT0 = np.concatenate([[0],data[var]])
-        ax.plot(years0[:len(deltaT0)], deltaT0, color = color, zorder = zorder) 
+        ax.plot(years0[:len(deltaT0)], sign*deltaT0, color = color, zorder = zorder) 
     if include_mean == True:
         meanT0 = mean_4xCO2tas(model, members, length_restriction = stopyear)
-        ax.plot(years0, meanT0, color = color, linewidth = 3, zorder = zorder + 1);
+        ax.plot(years0, sign*meanT0, color = color, linewidth = 3, zorder = zorder + 1);
     return ax
 
 def plot_Nvstime(ax, model, exp, members, stopyear = 150, include_mean = True, zorder = 2):
     # just for plotting on the axis "ax", which is defined somewhere else
     
     years = np.arange(1, stopyear + 1)
+    if exp == 'abrupt-0p5xCO2':
+        sign = -1
+    else: 
+        sign = 1
+            
     for (mb, member) in enumerate(members):
         data = load_anom(model, exp, member, length_restriction = stopyear)
         toarad = data['rsdt'] - data['rsut'] - data['rlut']
-        ax.plot(years[:len(toarad)], toarad, color = 'black', zorder = zorder) 
+        ax.plot(years[:len(toarad)], sign*toarad, color = 'black', zorder = zorder)
     if include_mean == True:
         meanN = mean_4xCO2toarad(model, members, length_restriction = stopyear)
-        ax.plot(years, meanN, color='black', linewidth = 3, zorder = zorder + 1);
+        ax.plot(years, sign*meanN, color='black', linewidth = 3, zorder = zorder + 1);
     return ax    
 
 def plot_NvsT(ax, model, exp, members, stopyear = 150, zorder = 2):
+    if exp == 'abrupt-0p5xCO2':
+        sign = -1
+    else: 
+        sign = 1
     for (mb, member) in enumerate(members):
         data = load_anom(model, exp, member, length_restriction = stopyear)
         tas = data['tas']
         toarad = data['rsdt'] - data['rsut'] - data['rlut']
-        ax.scatter(tas, toarad, color = 'black', zorder = zorder)
+        ax.scatter(sign*tas, sign*toarad, color = 'black', zorder = zorder)
     return ax
     
 def plot_NvsTfit(ax, timescales, a_n, b_n, color = 'lightblue', linewidth=1, zorder = 1):
