@@ -290,10 +290,14 @@ def Gregory_linreg(model, exp, members, startyear = 1, stopyear = 150):
         linfit = np.polyval(regpar, [0, gT2x])
     return gF2x, gT2x, linfit
 
-def forcing_F13(tasdata, Ndata, model, inputparfile = 'best_estimated_parameters_allmembers.csv'):
+def forcing_F13(tasdata, Ndata, model, inputparfile = 'best_estimated_parameters_allmembers.csv', years = None):
     parameter_table = pd.read_csv('../Estimates/' + inputparfile,index_col=0)
-    GregoryT2x = parameter_table.loc[model,'GregoryT2x']
-    GregoryF2x = parameter_table.loc[model,'GregoryF2x']
+    if years == None:
+        GregoryT2x = parameter_table.loc[model,'GregoryT2x']
+        GregoryF2x = parameter_table.loc[model,'GregoryF2x']
+    if years == '1-20':
+        GregoryT2x = parameter_table.loc[model,'GregoryT2x_1-20']
+        GregoryF2x = parameter_table.loc[model,'GregoryF2x_1-20']
     fbpar = GregoryF2x/GregoryT2x
     F = Ndata + fbpar*tasdata
     return F
