@@ -264,8 +264,10 @@ def branch_info_corrections(branch_info_table, printing = True):
                             alt_parent_member = 'r1i1p1f2'
                             if printing == True:
                                 print('this will not be used for computing anomalies anyway')  
-                        elif exp in ssp_exp and 'p5' in parent_member:
-                            alt_parent_member = parent_member.replace('p5', 'p1') # probably.
+                        elif exp in ssp_exp and 'p5f2' in parent_member:
+                            #alt_parent_member = parent_member.replace('p5', 'p1') 
+                            # probably not true, since p5f2 starts in year 2020.
+                            print('parent of p5f2 members unknown')
                     elif model in ['GISS-E2-1-H']:
                         if 'p5' in parent_member:
                             if exp in idealised_exp or exp in hist_exp:
