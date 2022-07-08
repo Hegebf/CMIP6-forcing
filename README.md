@@ -21,4 +21,8 @@ In the next step we read and save all calendar and branch information from the m
 Finally, we use all this information to construct global annual anomalies in the notebook Global_anomalies, with help from the functions stored in processing_functions.py.
 
 ## Step 3: Estimate forcing from the global annual anomalies
+First we estimate all parameters for the abrupt-4xCO2 experiments in the notebook abruptCO2exp_linresponses_allmembers, using functions defined in estimation.py. The parameters from this experiment are saved in Estimates, and loaded in the notebook EstimateTransientERF where we estimate the forcing for experiments with a time-varying forcing, such as the 1pctCO2, historical and SSP experiments.
 
+Our forcing estimates are compared to fixed-SST forcing estimates, computed in the notebook fixedSSTforcing for abrupt-4xCO2 and in FixedSST_transientERF for the historical + ssp245 experiment. 
+
+All results are saved in Estimates, and analysed further in other notebooks.
