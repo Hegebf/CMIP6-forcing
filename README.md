@@ -25,15 +25,15 @@ First we estimate all parameters for the abrupt-4xCO2 experiments in the noteboo
 
 Our forcing estimates are compared to fixed-SST forcing estimates, computed in the notebook fixedSSTforcing for abrupt-4xCO2 and in FixedSST_transientERF for the historical + ssp245 experiment. 
 
-All results are saved in Estimates, and analysed further in other notebooks.
+All results are saved in Estimates, and analysed further in other notebooks.  
 
-Member mean transient forcing for each model (the data behind Figure 3) can be found in the following files, located in Estimates:
-[1pctCO2 ERF](Estimates/member_mean_ERF_1pctCO2.csv)
-[historical ERF](Estimates/member_mean_ERF_historical.csv)
-[SSP1-1.9 ERF](Estimates/member_mean_ERF_ssp119.csv)
-[SSP1-2.6 ERF](Estimates/member_mean_ERF_ssp126.csv)
-[SSP2-4.5 ERF](Estimates/member_mean_ERF_ssp245.csv)
-[SSP3-7.0 ERF](Estimates/member_mean_ERF_ssp370.csv)
-[SSP5-8.5 ERF](Estimates/member_mean_ERF_ssp585.csv)
+Member mean transient forcing for each model (the data behind Figure 3) can be found in the following files, located in Estimates:  
+[1pctCO2 ERF](Estimates/member_mean_ERF_1pctCO2.csv)  
+[historical ERF](Estimates/member_mean_ERF_historical.csv)  
+[SSP1-1.9 ERF](Estimates/member_mean_ERF_ssp119.csv)  
+[SSP1-2.6 ERF](Estimates/member_mean_ERF_ssp126.csv)  
+[SSP2-4.5 ERF](Estimates/member_mean_ERF_ssp245.csv)  
+[SSP3-7.0 ERF](Estimates/member_mean_ERF_ssp370.csv)  
+[SSP5-8.5 ERF](Estimates/member_mean_ERF_ssp585.csv)  
 
 These are averages over the forcing estiamtes for individual members found in the folder [Estimates/Transient_forcing_estimates](Estimates/Transient_forcing_estimates)
