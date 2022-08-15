@@ -27,13 +27,16 @@ Our forcing estimates are compared to fixed-SST forcing estimates, computed in t
 
 All results are saved in Estimates, and analysed further in other notebooks.  
 
-Member mean transient forcing for each model (the data behind Figure 3) can be found in the following files, located in Estimates:  
+Member mean transient 3-lambda forcing for each model (the data behind Figures 3 and 4) can be found in the following files, located in Estimates:  
 [1pctCO2 ERF](Estimates/member_mean_ERF_1pctCO2.csv)  
 [historical ERF](Estimates/member_mean_ERF_historical.csv)  
+[hist-aer ERF](Estimates/member_mean_ERF_hist-aer.csv)  
+[hist-nat ERF](Estimates/member_mean_ERF_hist-nat.csv)  
+[hist-GHG ERF](Estimates/member_mean_ERF_hist-GHG.csv)  
 [SSP1-1.9 ERF](Estimates/member_mean_ERF_ssp119.csv)  
 [SSP1-2.6 ERF](Estimates/member_mean_ERF_ssp126.csv)  
 [SSP2-4.5 ERF](Estimates/member_mean_ERF_ssp245.csv)  
 [SSP3-7.0 ERF](Estimates/member_mean_ERF_ssp370.csv)  
 [SSP5-8.5 ERF](Estimates/member_mean_ERF_ssp585.csv)  
 
-These are averages over the forcing estiamtes for individual members found in the folder [Estimates/Transient_forcing_estimates](Estimates/Transient_forcing_estimates)
+These are averages over the forcing estimates for individual members found in the folder [Estimates/Transient_forcing_estimates](Estimates/Transient_forcing_estimates)
