@@ -1,5 +1,0 @@
- model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 SAM0-UNICON 1pctCO2 r1i1p1f1 piControl r1i1p1f1 0.0 99645.0 "days since 0001-01-01" standard
-1 SAM0-UNICON abrupt-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 99645.0 "days since 0001-01-01" standard
-2 SAM0-UNICON historical r1i1p1f1 piControl r1i1p1f1 0.0 99645.0 "days since 0001-01-01" standard
-3 SAM0-UNICON piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 19710.0 "days since 0001-01-01" standard

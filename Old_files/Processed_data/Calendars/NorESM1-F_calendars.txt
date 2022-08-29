@@ -1,2 +1,0 @@
- model exp member calendar
-0 NorESM1-F piControl r1i1p1f1 noleap

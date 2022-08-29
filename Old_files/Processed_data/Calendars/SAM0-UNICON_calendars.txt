@@ -1,5 +1,0 @@
- model exp member calendar
-0 SAM0-UNICON piControl r1i1p1f1 noleap
-1 SAM0-UNICON abrupt-4xCO2 r1i1p1f1 noleap
-2 SAM0-UNICON historical r1i1p1f1 noleap
-3 SAM0-UNICON 1pctCO2 r1i1p1f1 noleap

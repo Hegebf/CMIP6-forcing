@@ -1,5 +1,0 @@
- model exp member calendar
-0 GISS-E2-2-G abrupt-2xCO2 r1i1p1f1 noleap
-1 GISS-E2-2-G piControl r1i1p1f1 noleap
-2 GISS-E2-2-G abrupt-4xCO2 r1i1p1f1 noleap
-3 GISS-E2-2-G 1pctCO2 r1i1p1f1 noleap

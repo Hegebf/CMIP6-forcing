@@ -1,2 +1,0 @@
- model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 NorESM1-F piControl r1i1p1f1 piControl-spinup r1i1p1f1 547500.0 365000.0 "days since 0001-01-01" "hybrid-restart from year 1001-01-01 of piControl-spinup"

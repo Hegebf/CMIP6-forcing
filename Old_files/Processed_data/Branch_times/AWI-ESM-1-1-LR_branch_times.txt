@@ -1,3 +1,0 @@
- model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 AWI-ESM-1-1-LR historical r1i1p1f1 piControl r1i1p1f1 0.0 96057.0 "days since 1692-01-01 00:00:00" standard
-1 AWI-ESM-1-1-LR piControl r1i1p1f1 piControl-spinup r1i1p1f1 0.0 617990.0 "days since 0000-01-01 00:00:00" standard

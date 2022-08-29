@@ -1,8 +1,0 @@
- model exp member calendar
-0 IITM-ESM ssp585 r1i1p1f1 julian
-1 IITM-ESM piControl r1i1p1f1 julian
-2 IITM-ESM abrupt-4xCO2 r1i1p1f1 julian
-3 IITM-ESM ssp245 r1i1p1f1 julian
-4 IITM-ESM historical r1i1p1f1 julian
-5 IITM-ESM 1pctCO2 r1i1p1f1 julian
-6 IITM-ESM ssp370 r1i1p1f1 julian

@@ -1,7 +1,0 @@
- model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 KIOST-ESM 1pctCO2 r1i1p1f1 piControl r1i1p1f1 0.0 485782.0 "days since 1850-01-01" standard
-1 KIOST-ESM abrupt-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 485782.0 "days since 1850-01-01" standard
-2 KIOST-ESM historical r1i1p1f1 piControl r1i1p1f1 0.0 485782.0 "days since 1850-01-01" standard
-3 KIOST-ESM piControl r1i1p1f1 piControl-spinup r1i1p1f1 306445.0 0.0 "days since 1850-01-01" "no parent"
-4 KIOST-ESM ssp245 r1i1p1f1 historical r1i1p1f1 60266.0 60266.0 "days since 1850-01-01" standard
-5 KIOST-ESM ssp585 r1i1p1f1 historical r1i1p1f1 60266.0 60266.0 "days since 1850-01-01" standard

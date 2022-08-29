@@ -1,5 +1,0 @@
- model exp member parent_experiment_id parent_variant_id branch_time_in_child branch_time_in_parent parent_time_units branch_method
-0 TaiESM1 1pctCO2 r1i1p1f1 piControl r1i1p1f1 0.0 182500.0 "days since 1850-01-01" "Hybrid-restart from year 0701-01-01 of piControl"
-1 TaiESM1 abrupt-4xCO2 r1i1p1f1 piControl r1i1p1f1 0.0 438000.0 "days since 0701-01-01" "Hybrid-restart from year 0701-01-01 of piControl"
-2 TaiESM1 historical r1i1p1f1 piControl r1i1p1f1 0.0 171550.0 "days since 1850-01-01" "Hybrid-restart from year 0671-01-01 of piControl"
-3 TaiESM1 piControl r1i1p1f1 piControl-spinup r1i1p1f1 430335.0 430335.0 "days since 0001-01-01" "branch-restart from year 0201-01-01 of piControl-spinup"
