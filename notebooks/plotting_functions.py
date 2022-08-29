@@ -218,8 +218,10 @@ def forcing_smith(model, ERFtype = 'ERFtrop', plotting_axis = None):
             forcingestimate = model_df.loc[member][ERFtype]
             if plotting_axis != None:
                 if ERFtype == 'ERFtrop':
-                    plotting_axis.arrow(-0.5, forcingestimate, 0.3, 0, color = "red",\
-                                        clip_on = False, head_width = 0.15)
+                    plotting_axis.arrow(-0.8, forcingestimate, 0.8, 0, color = "red", width = 0.15, head_length = 0.3,\
+                                        clip_on = False, head_width = 0.3, length_includes_head = True)
+                    #plotting_axis.arrow(-0.5, forcingestimate, 0.3, 0, color = "red",\
+                    #                    clip_on = False, head_width = 0.15)
 
 
 def plot_components(t, Tn, timescales):
