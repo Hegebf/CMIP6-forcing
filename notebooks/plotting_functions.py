@@ -220,9 +220,6 @@ def forcing_smith(model, ERFtype = 'ERFtrop', plotting_axis = None):
                 if ERFtype == 'ERFtrop':
                     plotting_axis.arrow(-0.8, forcingestimate, 0.8, 0, color = "red", width = 0.15, head_length = 0.3,\
                                         clip_on = False, head_width = 0.3, length_includes_head = True)
-                    #plotting_axis.arrow(-0.5, forcingestimate, 0.3, 0, color = "red",\
-                    #                    clip_on = False, head_width = 0.15)
-
 
 def plot_components(t, Tn, timescales):
     fig, ax = plt.subplots(figsize = [9,5]) 
@@ -238,7 +235,7 @@ def plot_components(t, Tn, timescales):
     ax.tick_params(axis='both',labelsize=22)
     ax.legend(loc=2, prop={'size': 18})
 
-def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, titlestr = '', F4x_ratio = None, Ncoupled = None):
+def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, titlestr = ''):
     fig, ax = plt.subplots(nrows=1,ncols=2,figsize = [16,7])
     for axis in ax:
         axis.set_xlabel('t (years)',fontsize = 18)
@@ -251,25 +248,15 @@ def forcing_response_figure(t, Fiarray, Tiarray, Tcoupled, titlestr = '', F4x_ra
     #ax[0,].plot(t,Fiarray[:,np.shape(Fiarray)[1]-1],linewidth=1,color = "blue",label = "New forcing")
     ax[0,].plot(t,Fiarray[:,0],linewidth=2,color = "lightblue",label = "Old forcing")
     ax[0,].plot(t,Fiarray[:,np.shape(Fiarray)[1]-1],linewidth=1,color = "darkblue",label = "New forcing")
-    #if Ncoupled is not None:
-    #    ax[0,].plot(t, Ncoupled,linewidth=2,color = "red",label = "N")
     ax[0,].set_ylabel('F(t) [$W/m^2$]',fontsize = 18)
     ax[0,].set_title(titlestr + ' ERF',fontsize = 18)
     ax[1,].set_title(titlestr + ' Temp.',fontsize = 18)
     ax[1,].plot(t,Tcoupled,linewidth=3,color = "black",label = "coupled model response")
     #ax[1,].plot(t,Tiarray[:,0],'--',linewidth=2,color = "black",label = "Linear response to old forcing")
     ax[1,].plot(t,Tiarray[:,0],'--',linewidth=2,color = "lightblue",label = "Linear response to old forcing")
-    if F4x_ratio is not None:
-        ax[1,].plot(t,Tiarray[:,0]*F4x_ratio,'--',linewidth=2,color = "red",label = "Scaled response to old forcing")
     #ax[1,].plot(t,Tiarray[:,-1],'--',linewidth=2,color = "blue",label = "Linear response to new forcing")
     ax[1,].plot(t,Tiarray[:,-1],'--',linewidth=2,color = "darkblue",label = "Linear response to new forcing")
     ax[1,].set_ylabel('T(t) [°C]',fontsize = 18)
-    #print(np.size(Tcoupled))
-    #Tstd = np.std(expfit_detrend(Tcoupled.values))
-    #inds = np.argwhere(np.abs(Tcoupled.values-Tiarray[:,-1])/Tstd>2)#[:,-1]
-    #print(len(inds))
-    #if len(inds)>0:
-    #    ax[1,].axvline(x=t[inds[0]])
     ax[0,].text(0,1.03,'a)',transform=ax[0,].transAxes, fontsize=20)
     ax[1,].text(0,1.03,'b)',transform=ax[1,].transAxes, fontsize=20)
     #plt.close()
