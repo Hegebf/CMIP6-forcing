@@ -1,4 +1,4 @@
-# Code and data to be used for a paper about CMIP6 forcing
+# Code and data used for the paper "21st century scenario forcing increases more for CMIP6 than CMIP5 models", submitted to GRL Sept. 2022
 
 ## Step 1: Find out which data are available for analysis
 The work done in this step is stored in the folder Data_availability.
