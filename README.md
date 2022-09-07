@@ -1,5 +1,8 @@
 # Code and data used for the paper "21st century scenario forcing increases more for CMIP6 than CMIP5 models", submitted to GRL Sept. 2022
 
+The preprint is available at: https://doi.org/10.1002/essoar.10512322.1 
+This repository will be permanently stored in zenodo and get a doi once the paper is accepted. 
+
 ## Step 1: Find out which data are available for analysis
 The work done in this step is stored in the folder Data_availability.
 First we search through ESGF using pyclient to find all models with both piControl and abrupt-4xCO2 experiments.
