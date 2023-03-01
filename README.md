@@ -2,6 +2,8 @@
 
 The preprint is available at: https://doi.org/10.1002/essoar.10512322.1 (will be replaced with doi for final GRL paper once available)
 
+This code is deployed in zenodo at <a href="https://zenodo.org/badge/latestdoi/271763447"><img src="https://zenodo.org/badge/271763447.svg" alt="DOI"></a>
+
 ## Step 1: Find out which data are available for analysis
 The work done in this step is stored in the folder Data_availability.
 First we search through ESGF using pyclient to find all models with both piControl and abrupt-4xCO2 experiments.
