@@ -1,6 +1,6 @@
 # Code and data used for the paper "21st century scenario forcing increases more for CMIP6 than CMIP5 models"
 
-The preprint is available at: https://doi.org/10.1002/essoar.10512322.1 (will be replaced with doi for final GRL paper once available)
+The paper is available here: https://doi.org/10.1029/2023GL102916
 
 This code is deployed in zenodo at <a href="https://zenodo.org/badge/latestdoi/271763447"><img src="https://zenodo.org/badge/271763447.svg" alt="DOI"></a>
 
